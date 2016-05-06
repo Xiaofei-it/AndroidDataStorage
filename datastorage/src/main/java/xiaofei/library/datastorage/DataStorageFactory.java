@@ -2,6 +2,8 @@ package xiaofei.library.datastorage;
 
 import android.content.Context;
 
+import xiaofei.library.datastorage.database.DatabaseStorage;
+
 /**
  * Created by Eric on 16/3/24.
  */

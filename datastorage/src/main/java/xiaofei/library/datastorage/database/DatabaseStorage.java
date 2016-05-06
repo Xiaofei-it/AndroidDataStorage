@@ -1,4 +1,4 @@
-package xiaofei.library.datastorage;
+package xiaofei.library.datastorage.database;
 
 import android.content.Context;
 import android.support.v4.util.Pair;
@@ -8,8 +8,8 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+import xiaofei.library.datastorage.IDataStorage;
 import xiaofei.library.datastorage.annotation.AnnotationProcessor;
-import xiaofei.library.datastorage.database.DbCache;
 import xiaofei.library.datastorage.util.Condition;
 
 /**
@@ -40,7 +40,7 @@ public class DatabaseStorage implements IDataStorage {
         mAnnotationProcessor = AnnotationProcessor.getInstance();
     }
 
-    static synchronized DatabaseStorage getInstance(Context context) {
+    public static synchronized DatabaseStorage getInstance(Context context) {
         if (sInstance == null) {
             sInstance = new DatabaseStorage(context);
         }

@@ -66,7 +66,7 @@ public class DbCache implements IDbOperation {
         mAnnotationProcessor = AnnotationProcessor.getInstance();
     }
 
-    public static synchronized DbCache getInstance(Context context) {
+    static synchronized DbCache getInstance(Context context) {
         if (sInstance == null) {
             sInstance = new DbCache(context);
         }
