@@ -1,4 +1,31 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'android-data-storage'
+
+    publishedGroupId = 'xiaofei.library'
+    libraryName = 'AndroidDataStorage'
+    artifact = 'android-data-storage'
+
+    libraryDescription = 'An easy-to-use framework for storing data in the Android system.'
+
+    siteUrl = 'https://github.com/Xiaofei-it/AndroidDataStorage'
+    gitUrl = 'https://github.com/Xiaofei-it/AndroidDataStorage.git'
+
+    libraryVersion = '1.0'
+
+    developerId = 'Xiaofei-it'
+    developerName = 'Eric Zhao'
+    developerEmail = 'xiaofei.it@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
 
 android {
     compileSdkVersion 23
@@ -24,3 +51,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.3.0'
     compile 'com.google.code.gson:gson:2.5'
 }
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
