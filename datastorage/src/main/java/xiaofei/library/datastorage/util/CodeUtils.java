@@ -3,7 +3,7 @@ package xiaofei.library.datastorage.util;
 import java.io.UnsupportedEncodingException;
 
 /**
- * Created by Eric on 16/3/17.
+ * Created by Xiaofei on 16/3/17.
  *
  * Utils for encoding and decoding.
  */

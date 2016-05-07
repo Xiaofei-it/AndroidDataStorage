@@ -7,7 +7,7 @@ import java.util.List;
 import xiaofei.library.datastorage.util.Condition;
 
 /**
- * Created by Eric on 15/11/9.
+ * Created by Xiaofei on 15/11/9.
  *
  * This interface defines basic functions of database operations.
  *

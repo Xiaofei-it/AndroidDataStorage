@@ -5,7 +5,7 @@ import com.google.gson.Gson;
 import xiaofei.library.datastorage.util.CodeUtils;
 
 /**
- * Created by Eric on 16/3/16.
+ * Created by Xiaofei on 16/3/16.
  */
 public class GsonObjectCoder implements DbService.Coder {
 

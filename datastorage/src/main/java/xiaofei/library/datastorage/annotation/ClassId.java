@@ -6,7 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Created by Eric on 16/3/25.
+ * Created by Xiaofei on 16/3/25.
  *
  * Indicates the class id of the annotated class.
  *

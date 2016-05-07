@@ -11,7 +11,7 @@ import xiaofei.library.datastorage.util.CodeUtils;
 
 
 /**
- * Created by Eric on 16/3/21.
+ * Created by Xiaofei on 16/3/21.
  */
 public class SerialObjectCoder implements DbService.Coder {
     @Override

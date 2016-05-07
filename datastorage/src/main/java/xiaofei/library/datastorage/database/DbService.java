@@ -11,7 +11,7 @@ import java.util.List;
 import xiaofei.library.datastorage.annotation.AnnotationProcessor;
 import xiaofei.library.datastorage.util.Condition;
 /**
- * Created by Eric on 15/11/12.
+ * Created by Xiaofei on 15/11/12.
  *
  * DbService performs database operations. It is not thread-safe.
  *

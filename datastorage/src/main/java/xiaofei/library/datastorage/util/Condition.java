@@ -1,7 +1,7 @@
 package xiaofei.library.datastorage.util;
 
 /**
- * Created by Eric on 15/11/11.
+ * Created by Xiaofei on 15/11/11.
  *
  * Indicates whether an object satisfies a condition.
  *

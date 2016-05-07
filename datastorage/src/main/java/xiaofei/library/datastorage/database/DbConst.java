@@ -1,7 +1,7 @@
 package xiaofei.library.datastorage.database;
 
 /**
- * Created by Eric on 15/11/11.
+ * Created by Xiaofei on 15/11/11.
  */
 public class DbConst {
 

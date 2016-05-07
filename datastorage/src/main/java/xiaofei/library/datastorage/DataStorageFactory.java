@@ -5,7 +5,7 @@ import android.content.Context;
 import xiaofei.library.datastorage.database.DatabaseStorage;
 
 /**
- * Created by Eric on 16/3/24.
+ * Created by Xiaofei on 16/3/24.
  */
 public class DataStorageFactory {
 

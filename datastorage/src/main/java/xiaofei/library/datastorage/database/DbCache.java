@@ -19,7 +19,7 @@ import xiaofei.library.datastorage.annotation.AnnotationProcessor;
 import xiaofei.library.datastorage.util.Condition;
 
 /**
- * Created by Eric on 15/11/9.
+ * Created by Xiaofei on 15/11/9.
  *
  * This class is used as the database cache. It is thread-safe.
  *

@@ -13,7 +13,7 @@ import xiaofei.library.datastorage.annotation.AnnotationProcessor;
 import xiaofei.library.datastorage.util.Condition;
 
 /**
- * Created by Eric on 16/3/24.
+ * Created by Xiaofei on 16/3/24.
  *
  * An implementation of the interface IDataStorage.
  *
