@@ -1,3 +1,21 @@
+/**
+ *
+ * Copyright 2015-2016 Xiaofei
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ */
+
 package xiaofei.library.datastorage.database;
 
 import android.content.Context;
@@ -20,11 +38,11 @@ import xiaofei.library.datastorage.util.Condition;
  * DatabaseStorage stores data in an instance of the DbCache class. It is thread-safe, which is
  * guaranteed by the thread safety of DbCache.
  *
- * The functions within this class simply invoke the corresponding functions of the DbCache instance.
+ * The methods within this class simply invoke the corresponding methods of the DbCache instance.
  * They seldom check the correctness of arguments, which will be checked in the invocations of the
- * corresponding functions.
+ * corresponding methods.
  *
- * Programmers should use DataStorageFactory to obtain DatabaseStorage.
+ * Developers should use DataStorageFactory to obtain DatabaseStorage.
  *
  */
 public class DatabaseStorage implements IDataStorage {

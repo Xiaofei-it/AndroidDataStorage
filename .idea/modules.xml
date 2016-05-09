@@ -5,7 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/AndroidDataStorage.iml" filepath="$PROJECT_DIR$/AndroidDataStorage.iml" />
       <module fileurl="file://$PROJECT_DIR$/android-data-storage/android-data-storage.iml" filepath="$PROJECT_DIR$/android-data-storage/android-data-storage.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/android-data-storage/datastorage.iml" filepath="$PROJECT_DIR$/android-data-storage/datastorage.iml" />
     </modules>
   </component>
 </project>

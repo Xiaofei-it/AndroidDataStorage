@@ -1,3 +1,21 @@
+/**
+ *
+ * Copyright 2015-2016 Xiaofei
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ */
+
 package xiaofei.library.datastorage.database;
 
 import android.content.Context;
@@ -26,19 +44,21 @@ import xiaofei.library.datastorage.util.Condition;
  * In this framework, the DatabaseStorage class is an implementation of the IDataStorage interface.
  *
  * In the DatabaseStorage class, the storage has two level, a high level which is the memory cache
- * and a low level which is the database file. Any loading first searches the high level for the
- * specified data. If the search is successful, the loading succeeds. Otherwise, the low level loads
- * the specified data from the database file (if it exists), and the high level stores it in the
- * memory cache and return it as the search result. Any following loading of the same data obtains
- * the data from the memory cache and thus avoids the heavy-overhead operation of database.
+ * and a low level which is the database file. A loading operation first searches the high level
+ * for the specified data. If the search is successful, the loading operation succeeds. Otherwise,
+ * the low level loads the specified data from the database file (if it exists), and the high level
+ * stores it in the memory cache and return it as the search result. Any following loading operation
+ * of the same data obtains the data from the memory cache and thus avoids the heavy-overhead
+ * operations of database.
  *
  * Each operation is performed both in the high level and the low level. The memory cache has an
- * excellent performance, so the effect is immediate. The overhead of database operation is heavy,
- * so the operation is asynchronous. To avoiding any exception when operating the database, this
- * class uses a single-thread executor to perform database operations sequentially.
+ * excellent performance, so the effect of the operation is immediate. The overhead of database
+ * operation is heavy, so the operation is performed asynchronously. To avoiding any exception
+ * when operating the database, this class uses a single-thread executor to perform database
+ * operations sequentially.
  *
  * Before any operation, a sync operation is performed to check whether the high level has the data
- * of the specified class, and if it does not, the low level simply load all the dataa of the specified
+ * of the specified class, and if it does not, the low level simply load all the data of the specified
  * class from the database.
  *
  */
