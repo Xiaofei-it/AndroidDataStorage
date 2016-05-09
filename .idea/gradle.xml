@@ -8,15 +8,15 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/android-data-storage" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/datastorage" />
           </set>
         </option>
         <option name="myModules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/android-data-storage" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/datastorage" />
           </set>
         </option>
       </GradleProjectSettings>

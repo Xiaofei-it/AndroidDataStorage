@@ -1,1 +1,1 @@
-include ':app', ':datastorage'
+include ':app', ':android-data-storage'
