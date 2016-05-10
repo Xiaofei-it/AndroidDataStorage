@@ -25,7 +25,7 @@ public class DbOpenHelper extends android.database.sqlite.SQLiteOpenHelper {
 
 
     public DbOpenHelper(Context context) {
-        super(context.getApplicationContext(), DbConst.TABLE_NAME, null, DbConst.VERSION);
+        super(context.getApplicationContext(), DbConst.TABLE_NAME, null, DbConfig.getVersion());
 
     }
 

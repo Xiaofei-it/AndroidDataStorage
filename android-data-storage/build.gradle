@@ -15,7 +15,7 @@ ext {
     siteUrl = 'https://github.com/Xiaofei-it/AndroidDataStorage'
     gitUrl = 'https://github.com/Xiaofei-it/AndroidDataStorage.git'
 
-    libraryVersion = '1.0.1'
+    libraryVersion = '1.0.2'
 
     developerId = 'Xiaofei-it'
     developerName = 'Eric Zhao'

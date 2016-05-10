@@ -33,8 +33,6 @@ public class DbConst {
 
     public static final String OBJECT_DATA = "object_dat";
 
-    public static final int VERSION = 1;
-
     public static final String CREATE_TABLE_COMMAND =
             "CREATE TABLE IF NOT EXISTS " + DbConst.TABLE_NAME + " ("
                     + "`" + DbConst.ID + "` INTEGER PRIMARY KEY  AUTOINCREMENT NOT NULL, "
