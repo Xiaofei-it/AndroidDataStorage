@@ -33,25 +33,31 @@ dependencies {
 
 ##用法
 
-1、获取接口
+###1. 获取接口
 
+   获取IDataStorage接口，目前只支持数据库类型。
 ```
 IDataStorage dataStorage = DataStorageFactory.getInstance(
                                getApplicationContext(),
                                DataStorageFactory.TYPE_DATABASE);
 ```
+###2、存储原理
 
-2、存储数据的时候，索引是类id和对象id。如果这两个id相同，则老数据被覆盖。读取数据的时候也需要提供这两个id。
+存储数据的时候，索引是类id和对象id。如果这两个id相同，则老数据被覆盖。读取数据的时候也需要提供这两个id。
 
-3、给需要存储的类加上ClassId注解，里面写上类id。需要保证不同的类有不同的id。
+###3、类id
 
-   如果不同版本的代码在混淆后，能保证该类的类名不变，那就不需要加注解。框架将类的包名和类名作为类id。
+给需要存储的类加上ClassId注解，里面写上类id。需要保证不同的类有不同的id。
 
-3、如果类的某个字段就是对象id，那在那个字段之前加上ObjectId注解。该字段必须是String。框架将这个字段作为对象id。
+如果不同版本的代码在混淆后，能保证该类的类名不变，那就不需要加注解。框架将类的包名和类名作为类id。
 
-   如果没有这个字段，那读写数据的时候需要提供对象id作为函数的参数。
+###4、对象id
 
-   以下给出一个例子：
+如果类的某个字段就是对象id，那在那个字段之前加上ObjectId注解。该字段必须是String。框架将这个字段作为对象id。
+
+如果没有这个字段，那读写数据的时候需要提供对象id作为函数的参数。
+
+以下给出一个例子：
 
 ```
 @ClassId("Order")
@@ -67,16 +73,17 @@ public class Order {
     ...
     ...
 }
+```
 
-4、存储数据
+###5、存储数据
 
-   存储对象order：
+存储对象order：
 
 ```
 dataStorage.saveOrUpdate(order);
 ```
 
-   存储一个order列表：
+存储一个order列表：
 
 ```
 List<Order> list = new ArrayList<Order>();
@@ -84,7 +91,7 @@ List<Order> list = new ArrayList<Order>();
 dataStorage.saveOrUpdate(list);
 ```
 
-   如果Order内部没有对象id的字段：
+如果Order内部没有对象id的字段：
 
 ```
 dataStorage.saveOrUpdate(order, "1001");
@@ -96,21 +103,21 @@ List<String> ids = new ArrayList<ids>();
 dataStorage.saveOrUpdate(list, ids);
 ```
 
-5、读取数据
+###6、读取数据
 
-   读取一个数据
+读取一个数据
 
 ```
 Order order = dataStorage.load(Order.class, "1001");
 ```
 
-   读取所有Order
+读取所有Order
 
 ```
 List<Order> list = dataStorage.loadAll(Order.class);
 ```
 
-   读取mState为10的所有Order
+读取mState为10的所有Order
 
 ```
 List<Order> list = dataStorage.load(Order.class, new Condition() {
@@ -121,7 +128,7 @@ List<Order> list = dataStorage.load(Order.class, new Condition() {
                    });
 ```
 
-   读取一批id的Order
+读取一批id的Order
 
 ```
 List<String> ids = new ArrayList<String>();
@@ -129,42 +136,42 @@ List<String> ids = new ArrayList<String>();
 List<Order> list = dataStorage.load(Order.class, ids);
 ```
 
-   以上函数都有一个参数Comparator供选择，提供Comparator后，获取的List是经过排序的。
+以上函数都有一个参数Comparator供选择，提供Comparator后，获取的List是经过排序的。
 
 ```
 List<Order> list = dataStorage.loadAll(Order.class, comparator);
 ```
 
-   我还做了一个工具类，可以方便地自动生成Comparator。详见[这里](https://github.com/Xiaofei-it/ComparatorGenerator)。
+我还做了一个工具类，可以方便地自动生成Comparator。详见[这里](https://github.com/Xiaofei-it/ComparatorGenerator)。
 
-6、删除数据
+###7、删除数据
 
-   删除一个数据
+删除一个数据
 
 ```
 dataStorage.delete(order);
 ```
 
-   如果Order类里没有提供对象id，那么
+如果Order类里没有提供对象id，那么
 
 ```
 dataStorage.delete(Order.class, "1001");
 ```
 
-   删除所有Order
+删除所有Order
 
 ```
 dataStorage.deleteAll(Order.class);
 ```
 
-   删除一批Order
+删除一批Order
 
 ```
 List<Order> list = new ArrayList<Order>();
 dataStorage.delete(list);
 ```
 
-   如果Order类里没有提供对象id，那么
+如果Order类里没有提供对象id，那么
 
 ```
 List<String> ids = new ArrayList<String>();
@@ -172,7 +179,7 @@ List<String> ids = new ArrayList<String>();
 dataStorage.delete(Order.class, ids);
 ```
 
-   删除mState为10的Order
+删除mState为10的Order
 
 
 ```
@@ -184,4 +191,6 @@ dataStorage.delete(Order.class, new Condition() {
                    });
 ```
 
-7、其他还有许多API，具体请看[xiaofei.library.datastorage.IDataStorage](https://github.com/Xiaofei-it/AndroidDataStorage/blob/master/android-data-storage/src/main/java/xiaofei/library/datastorage/IDataStorage.java)。
+###8、其他API
+
+还有许多API，具体请看[xiaofei.library.datastorage.IDataStorage](https://github.com/Xiaofei-it/AndroidDataStorage/blob/master/android-data-storage/src/main/java/xiaofei/library/datastorage/IDataStorage.java)。
