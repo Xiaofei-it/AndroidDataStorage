@@ -32,7 +32,7 @@ dependencies {
 </dependency>
 ```
 
-##用法
+##Usage
 
 ###1. Obtain the implementation of data storage
 
@@ -198,6 +198,6 @@ dataStorage.delete(Order.class, new Condition() {
                    });
 ```
 
-###8、Other APIs
+###8. Other APIs
 
 There are a lot of APIs. Please See [xiaofei.library.datastorage.IDataStorage](https://github.com/Xiaofei-it/AndroidDataStorage/blob/master/android-data-storage/src/main/java/xiaofei/library/datastorage/IDataStorage.java).
