@@ -82,7 +82,13 @@ public class Order {
 }
 ```
 
-###5. Storing
+###5. APIs
+
+The following introduces APIs for storing and loading data.
+
+All of the APIs perform operations in the memory cache and put the database operations in the background, so feel free to call the APIs in the main thread.
+
+####1. Storing
 
 Store an order:
 
@@ -110,7 +116,7 @@ List<String> ids = new ArrayList<ids>();
 dataStorage.saveOrUpdate(list, ids);
 ```
 
-###6. Loading
+###2. Loading
 
 Load an order:
 
@@ -151,7 +157,7 @@ List<Order> list = dataStorage.loadAll(Order.class, comparator);
 
 I have write a helper class to provide an easy way to generate a comparator. See [Here](https://github.com/Xiaofei-it/ComparatorGenerator).
 
-###7. Deleting
+####3. Deleting
 
 Delete an order:
 
@@ -198,6 +204,6 @@ dataStorage.delete(Order.class, new Condition() {
                    });
 ```
 
-###8. Other APIs
+####4. Other APIs
 
 There are a lot of APIs. Please See [xiaofei.library.datastorage.IDataStorage](https://github.com/Xiaofei-it/AndroidDataStorage/blob/master/android-data-storage/src/main/java/xiaofei/library/datastorage/IDataStorage.java).

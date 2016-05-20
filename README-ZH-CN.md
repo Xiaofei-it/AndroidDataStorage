@@ -79,7 +79,13 @@ public class Order {
 }
 ```
 
-###5、存储数据
+###5、APIs
+
+下文介绍存储和读取数据的API。
+
+所有API操作都发生在内存中，而相应的数据库操作放在了后台线程中，所以这些API都可以在主线程调用，不会阻塞主线程。
+
+####1、存储数据
 
 存储对象order：
 
@@ -107,7 +113,7 @@ List<String> ids = new ArrayList<ids>();
 dataStorage.saveOrUpdate(list, ids);
 ```
 
-###6、读取数据
+####2、读取数据
 
 读取一个数据
 
@@ -148,7 +154,7 @@ List<Order> list = dataStorage.loadAll(Order.class, comparator);
 
 我还做了一个工具类，可以方便地自动生成Comparator。详见[这里](https://github.com/Xiaofei-it/ComparatorGenerator)。
 
-###7、删除数据
+####3、删除数据
 
 删除一个数据
 
@@ -195,6 +201,6 @@ dataStorage.delete(Order.class, new Condition() {
                    });
 ```
 
-###8、其他API
+####4、其他API
 
 还有许多API，具体请看[xiaofei.library.datastorage.IDataStorage](https://github.com/Xiaofei-it/AndroidDataStorage/blob/master/android-data-storage/src/main/java/xiaofei/library/datastorage/IDataStorage.java)。
