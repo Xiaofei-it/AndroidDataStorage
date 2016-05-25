@@ -210,14 +210,14 @@ public class DbCache implements IDbOperation {
         sync(clazz);
         synchronized (mCache) {
             Map<String, Object> map = mCache.get(mAnnotationProcessor.getClassId(clazz));
-            Collection<Object> objects = map.values();
+            Set<Map.Entry<String, Object>> entries = map.entrySet();
             List<String> ids = new ArrayList<>();
-            for (Object object : objects) {
-                if (object == null) {
+            for (Map.Entry<String, Object> entry : entries) {
+                if (entry == null || entry.getKey() == null || entry.getValue() == null) {
                     continue;
                 }
-                if (condition == null || condition.satisfy((T) object)) {
-                    ids.add(mAnnotationProcessor.getObjectId(object));
+                if (condition == null || condition.satisfy((T) entry.getValue())) {
+                    ids.add(entry.getKey());
                 }
             }
             if (!ids.isEmpty()) {
