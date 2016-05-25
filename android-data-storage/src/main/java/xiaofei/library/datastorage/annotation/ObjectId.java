@@ -39,7 +39,7 @@ import java.lang.annotation.Target;
  * Distinct objects of the same class should have distinct object ids. If not, the behavior is unspecified.
  */
 
-@Target(ElementType.FIELD)
+@Target({ElementType.FIELD, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface ObjectId {
 
