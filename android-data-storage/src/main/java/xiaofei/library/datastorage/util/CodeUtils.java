@@ -48,23 +48,11 @@ public class CodeUtils {
         return result.toString();
     }
 
-    public static String encode(String input) {
-        if (input == null || input.length() < 0) {
-            throw new IllegalArgumentException();
-        }
-        try {
-            return encode(input.getBytes("UTF-8"));
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
     private static int charToInt(char ch) {
         return '0' <= ch && ch <= '9' ? ch - '0' : ch - 'A' + 10;
     }
 
-    public static byte[] decodeToBytes(String input) {
+    public static byte[] decode(String input) {
         if (input == null) {
             throw new IllegalArgumentException("Input error.");
         }
@@ -81,16 +69,4 @@ public class CodeUtils {
         return result;
     }
 
-    public static String decode(String input) {
-        if (input == null || input.length() < 0 || input.length() % 2 != 0) {
-            throw new IllegalArgumentException("Input error.");
-        }
-        byte[] bytes = decodeToBytes(input);
-        try {
-            return new String(bytes, "UTF-8");
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
 }

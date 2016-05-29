@@ -27,12 +27,23 @@ import xiaofei.library.datastorage.util.CodeUtils;
  */
 public class GsonObjectCoder implements DbService.Coder {
 
-    private Gson mGson = new Gson();
+    private Gson mGson;
+
+    private ICoderHook mCoderHook;
+
+    public GsonObjectCoder() {
+        this(new DefaultCoderHook());
+    }
+
+    public GsonObjectCoder(ICoderHook coderHook) {
+        mGson = new Gson();
+        mCoderHook = coderHook;
+    }
 
     @Override
     public <T> T decode(String string, Class<T> clazz) {
         try {
-            return mGson.fromJson(CodeUtils.decode(string), clazz);
+            return mGson.fromJson(mCoderHook.decode(string), clazz);
         } catch (RuntimeException e) {
             //To handle the exception, just simply ignore this element.
             return null;
@@ -41,7 +52,7 @@ public class GsonObjectCoder implements DbService.Coder {
 
     @Override
     public String encode(Object object) {
-        return CodeUtils.encode(mGson.toJson(object));
+        return mCoderHook.encode(mGson.toJson(object));
     }
 
 }
