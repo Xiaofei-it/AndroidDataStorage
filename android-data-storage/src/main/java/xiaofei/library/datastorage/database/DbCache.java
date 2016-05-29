@@ -30,6 +30,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -139,6 +140,10 @@ public class DbCache implements IDbOperation {
                     }
                 } catch (RuntimeException e) {
                     e.printStackTrace();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                } catch (Throwable t) {
+                    t.printStackTrace();
                 }
             }
         });

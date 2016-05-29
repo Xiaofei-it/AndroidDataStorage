@@ -47,12 +47,24 @@ public class GsonObjectCoder implements DbService.Coder {
         } catch (RuntimeException e) {
             //To handle the exception, just simply ignore this element.
             return null;
+        } catch (Exception e) {
+            return null;
+        } catch (Throwable t) {
+            return null;
         }
     }
 
     @Override
     public String encode(Object object) {
-        return mCoderHook.encode(mGson.toJson(object));
+        try {
+            return mCoderHook.encode(mGson.toJson(object));
+        } catch (RuntimeException e) {
+            return null;
+        } catch (Exception e) {
+            return null;
+        } catch (Throwable t) {
+            return null;
+        }
     }
 
 }
