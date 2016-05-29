@@ -52,7 +52,7 @@ public class DbService implements IDbOperation {
         mDatabaseHelper = new DbOpenHelper(context);
         //The following statement may throw an exception.
         mDb = mDatabaseHelper.getWritableDatabase();
-        mCoder = new GsonObjectCoder();
+        mCoder = new GsonObjectCoder(new GzipCoderHook());
         mAnnotationProcessor = AnnotationProcessor.getInstance();
     }
 
