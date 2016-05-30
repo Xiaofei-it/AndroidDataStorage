@@ -18,8 +18,8 @@
 
 package xiaofei.library.datastoragetest;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 list.add(new B(new A("abc"), new BigDecimal("0.9")));
                 list.add(new B(new A("xyz"), new BigDecimal("90")));
                 dataStorage.storeOrUpdate(list);
+                dataStorage.storeOrUpdate(new C(), "1");
             }
         });
         findViewById(R.id.load).setOnClickListener(new View.OnClickListener() {
@@ -55,6 +56,9 @@ public class MainActivity extends AppCompatActivity {
                 for (B b : list) {
                     sb.append(b.a.s).append(' ').append(b.bigDecimal.toString()).append(' ');
                 }
+                sb.append('\n');
+                C c = dataStorage.load(C.class, "1");
+                sb.append(c.i).append("length=" + c.s.length());
                 Toast.makeText(getApplicationContext(), sb.toString(), Toast.LENGTH_SHORT).show();
             }
         });
@@ -77,6 +81,19 @@ public class MainActivity extends AppCompatActivity {
         B(A a, BigDecimal bigDecimal) {
             this.a = a;
             this.bigDecimal = bigDecimal;
+        }
+    }
+
+    private static class C {
+        public int i;
+        public String s;
+        public C() {
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < 100000; ++i) {
+                sb.append(Integer.toString(i));
+            }
+            s = sb.toString();
+            this.i = s.length();
         }
     }
 }
