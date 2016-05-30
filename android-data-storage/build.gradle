@@ -15,7 +15,7 @@ ext {
     siteUrl = 'https://github.com/Xiaofei-it/AndroidDataStorage'
     gitUrl = 'https://github.com/Xiaofei-it/AndroidDataStorage.git'
 
-    libraryVersion = '1.0.4'
+    libraryVersion = '1.1.0'
 
     developerId = 'Xiaofei-it'
     developerName = 'Eric Zhao'
@@ -32,7 +32,7 @@ android {
     buildToolsVersion "23.0.3"
 
     defaultConfig {
-        minSdkVersion 9
+        minSdkVersion 8
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"

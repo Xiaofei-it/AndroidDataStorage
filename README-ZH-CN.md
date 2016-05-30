@@ -20,7 +20,7 @@
 
 ```
 dependencies {
-    compile 'xiaofei.library:android-data-storage:1.0.4'
+    compile 'xiaofei.library:android-data-storage:1.1.0'
 }
 ```
 
@@ -30,7 +30,7 @@ dependencies {
 <dependency>
   <groupId>xiaofei.library</groupId>
   <artifactId>android-data-storage</artifactId>
-  <version>1.0.4</version>
+  <version>1.1.0</version>
   <type>pom</type>
 </dependency>
 ```
