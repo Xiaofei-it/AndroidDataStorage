@@ -18,53 +18,44 @@
 
 package xiaofei.library.datastorage.database;
 
-import com.google.gson.Gson;
+import java.io.UnsupportedEncodingException;
 
 import xiaofei.library.datastorage.util.CodeUtils;
+import xiaofei.library.datastorage.util.GzipUtils;
 
 /**
- * Created by Xiaofei on 16/3/16.
+ * Created by Xiaofei on 16/5/29.
  */
-public class GsonObjectCoder implements DbService.Coder {
-
-    private Gson mGson;
-
-    private ICoderHook mCoderHook;
-
-    public GsonObjectCoder() {
-        this(new DefaultCoderHook());
-    }
-
-    public GsonObjectCoder(ICoderHook coderHook) {
-        mGson = new Gson();
-        mCoderHook = coderHook;
+public class GzipCoderHook implements ICoderHook {
+    @Override
+    public String decode(String input) {
+        try {
+            return new String(GzipUtils.decompress(CodeUtils.decode(input)), "UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        } catch (RuntimeException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } catch (Throwable t) {
+            t.printStackTrace();
+        }
+        return null;
     }
 
     @Override
-    public <T> T decode(String string, Class<T> clazz) {
+    public String encode(String input) {
         try {
-            return mGson.fromJson(mCoderHook.decode(string), clazz);
+            return CodeUtils.encode(GzipUtils.compress(input.getBytes("UTF-8")));
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
         } catch (RuntimeException e) {
-            //To handle the exception, just simply ignore this element.
-            return null;
+            e.printStackTrace();
         } catch (Exception e) {
-            return null;
+            e.printStackTrace();
         } catch (Throwable t) {
-            return null;
+            t.printStackTrace();
         }
+        return null;
     }
-
-    @Override
-    public String encode(Object object) {
-        try {
-            return mCoderHook.encode(mGson.toJson(object));
-        } catch (RuntimeException e) {
-            return null;
-        } catch (Exception e) {
-            return null;
-        } catch (Throwable t) {
-            return null;
-        }
-    }
-
 }

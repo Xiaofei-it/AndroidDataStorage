@@ -24,7 +24,6 @@ import android.support.v4.util.Pair;
 import android.text.TextUtils;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -139,6 +138,10 @@ public class DbCache implements IDbOperation {
                     }
                 } catch (RuntimeException e) {
                     e.printStackTrace();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                } catch (Throwable t) {
+                    t.printStackTrace();
                 }
             }
         });

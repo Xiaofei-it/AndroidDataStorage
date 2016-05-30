@@ -38,7 +38,7 @@ public class SerialObjectCoder implements DbService.Coder {
             throw new IllegalArgumentException();
         }
         try {
-            byte[] bytes = CodeUtils.decodeToBytes(string);
+            byte[] bytes = CodeUtils.decode(string);
             ByteArrayInputStream bais = new ByteArrayInputStream(bytes);
             ObjectInputStream oos = new ObjectInputStream(bais);
             return (T) oos.readObject();
