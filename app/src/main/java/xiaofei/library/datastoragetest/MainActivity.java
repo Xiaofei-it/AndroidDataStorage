@@ -1,7 +1,25 @@
+/**
+ *
+ * Copyright 2015-2016 Xiaofei
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ */
+
 package xiaofei.library.datastoragetest;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
@@ -27,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 list.add(new B(new A("abc"), new BigDecimal("0.9")));
                 list.add(new B(new A("xyz"), new BigDecimal("90")));
                 dataStorage.storeOrUpdate(list);
+                dataStorage.storeOrUpdate(new C(), "1");
             }
         });
         findViewById(R.id.load).setOnClickListener(new View.OnClickListener() {
@@ -37,6 +56,9 @@ public class MainActivity extends AppCompatActivity {
                 for (B b : list) {
                     sb.append(b.a.s).append(' ').append(b.bigDecimal.toString()).append(' ');
                 }
+                sb.append('\n');
+                C c = dataStorage.load(C.class, "1");
+                sb.append(c.i).append("length=" + c.s.length());
                 Toast.makeText(getApplicationContext(), sb.toString(), Toast.LENGTH_SHORT).show();
             }
         });
@@ -59,6 +81,19 @@ public class MainActivity extends AppCompatActivity {
         B(A a, BigDecimal bigDecimal) {
             this.a = a;
             this.bigDecimal = bigDecimal;
+        }
+    }
+
+    private static class C {
+        public int i;
+        public String s;
+        public C() {
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < 100000; ++i) {
+                sb.append(Integer.toString(i));
+            }
+            s = sb.toString();
+            this.i = s.length();
         }
     }
 }
