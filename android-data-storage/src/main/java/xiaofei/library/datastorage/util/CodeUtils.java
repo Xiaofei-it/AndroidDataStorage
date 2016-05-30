@@ -18,8 +18,6 @@
 
 package xiaofei.library.datastorage.util;
 
-import java.io.UnsupportedEncodingException;
-
 /**
  * Created by Xiaofei on 16/3/17.
  *

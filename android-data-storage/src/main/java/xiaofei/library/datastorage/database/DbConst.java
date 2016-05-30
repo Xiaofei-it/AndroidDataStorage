@@ -38,9 +38,9 @@ public class DbConst {
                     + "`" + DbConst.ID + "` INTEGER PRIMARY KEY  AUTOINCREMENT NOT NULL, "
                     + "`" + DbConst.CLASS_ID + "` varchar(100) NOT NULL, "
                     + "`" + DbConst.OBJECT_ID + "` varchar(100) NOT NULL, "
-                    + "`" + DbConst.OBJECT_DATA + "` text NOT NULL); "
-                    + "CREATE UNIQUE INDEX id_object ON " + DbConst.TABLE_NAME + "(`" + DbConst.CLASS_ID
-                    + "`, `" + DbConst.OBJECT_ID + "`);";
+                    + "`" + DbConst.OBJECT_DATA + "` text NOT NULL, "
+                    + "UNIQUE (`" + DbConst.CLASS_ID + "`, `" + DbConst.OBJECT_ID + "`) "
+                    + "ON CONFLICT REPLACE);";
 
     public static final String DELETE_TABLE_COMMAND =
             "DROP TABLE IF EXISTS " + DbConst.TABLE_NAME;

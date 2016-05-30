@@ -23,7 +23,7 @@ package xiaofei.library.datastorage.database;
  */
 public class DbConfig {
 
-    private static volatile int sVersion = 1;
+    private static volatile int sVersion = 2;
 
     private DbConfig() {
 
