@@ -147,10 +147,10 @@ public class DbService implements IDbOperation {
     }
 
     @Override
-    public <T> T getObject(Class<T> clazz, String objectIds) {
+    public <T> T getObject(Class<T> clazz, String objectId) {
         T result = null;
         Cursor cursor = mDb.query(DbConst.TABLE_NAME, null,
-                generateEquation(DbConst.CLASS_ID, mAnnotationProcessor.getClassId(clazz)) + " and " + generateEquation(DbConst.OBJECT_ID, objectIds),
+                generateEquation(DbConst.CLASS_ID, mAnnotationProcessor.getClassId(clazz)) + " and " + generateEquation(DbConst.OBJECT_ID, objectId),
                 null, null, null, null);
         if (cursor.moveToNext()) {
             String data = cursor.getString(cursor.getColumnIndex(DbConst.OBJECT_DATA));

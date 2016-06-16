@@ -83,11 +83,11 @@ public interface IDbOperation {
      * Return the objects of the specified class and the specified object ids.
      *
      * @param clazz
-     * @param objectIds
+     * @param objectId
      * @param <T>
      * @return
      */
-    <T> T getObject(Class<T> clazz, String objectIds);
+    <T> T getObject(Class<T> clazz, String objectId);
 
     /**
      * Return the objects of the specified class, which satisfy the condition.
