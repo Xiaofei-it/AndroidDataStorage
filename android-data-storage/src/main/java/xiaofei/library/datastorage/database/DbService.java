@@ -40,7 +40,7 @@ public class DbService implements IDbOperation {
 
     private static final String EQUAL = "` = '";
 
-    private static DbService sInstance;
+    private static volatile DbService sInstance;
 
     private DbOpenHelper mDatabaseHelper;
 
@@ -56,9 +56,13 @@ public class DbService implements IDbOperation {
         mAnnotationProcessor = AnnotationProcessor.getInstance();
     }
 
-    static synchronized DbService getInstance(Context context) {
+    static DbService getInstance(Context context) {
         if (sInstance == null) {
-            sInstance = new DbService(context);
+            synchronized (DbService.class) {
+                if (sInstance == null) {
+                    sInstance = new DbService(context);
+                }
+            }
         }
         return sInstance;
     }

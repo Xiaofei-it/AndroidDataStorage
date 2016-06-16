@@ -47,7 +47,7 @@ import xiaofei.library.datastorage.util.Condition;
  */
 public class DatabaseStorage implements IDataStorage {
 
-    private static DatabaseStorage sInstance = null;
+    private static volatile DatabaseStorage sInstance = null;
 
     private DbCache mCache;
 
@@ -58,9 +58,13 @@ public class DatabaseStorage implements IDataStorage {
         mAnnotationProcessor = AnnotationProcessor.getInstance();
     }
 
-    public static synchronized DatabaseStorage getInstance(Context context) {
+    public static DatabaseStorage getInstance(Context context) {
         if (sInstance == null) {
-            sInstance = new DatabaseStorage(context);
+            synchronized (DatabaseStorage.class) {
+                if (sInstance == null) {
+                    sInstance = new DatabaseStorage(context);
+                }
+            }
         }
         return sInstance;
     }

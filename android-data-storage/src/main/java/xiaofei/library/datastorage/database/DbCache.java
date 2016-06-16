@@ -29,6 +29,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -63,7 +64,7 @@ import xiaofei.library.datastorage.util.Condition;
  */
 public class DbCache implements IDbOperation {
 
-    private static DbCache sInstance = null;
+    private static volatile DbCache sInstance = null;
 
     private final ExecutorService mExecutorService;
 
@@ -71,11 +72,11 @@ public class DbCache implements IDbOperation {
 
     private AnnotationProcessor mAnnotationProcessor;
 
-    private final Map<String, Map<String, Object>> mCache;
+    private final ConcurrentHashMap<String, ConcurrentHashMap<String, Object>> mCache;
 
     private DbCache(Context context) {
         mExecutorService = Executors.newSingleThreadExecutor();
-        mCache = new HashMap<String, Map<String, Object>>();
+        mCache = new ConcurrentHashMap<String, ConcurrentHashMap<String, Object>>();
         try {
             mDatabase = DbService.getInstance(context);
         } catch (RuntimeException e) {
@@ -85,9 +86,13 @@ public class DbCache implements IDbOperation {
         mAnnotationProcessor = AnnotationProcessor.getInstance();
     }
 
-    static synchronized DbCache getInstance(Context context) {
+    static DbCache getInstance(Context context) {
         if (sInstance == null) {
-            sInstance = new DbCache(context);
+            synchronized (DbCache.class) {
+                if (sInstance == null) {
+                    sInstance = new DbCache(context);
+                }
+            }
         }
         return sInstance;
     }
