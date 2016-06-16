@@ -109,11 +109,7 @@ public class DbCache implements IDbOperation {
             for (Pair<String, T> pair : list) {
                 map.put(pair.first, pair.second);
             }
-            synchronized (mCache) {
-                if (!mCache.containsKey(className)) {
-                    mCache.put(className, map);
-                }
-            }
+            mCache.putIfAbsent(className, map);
         }
     }
 
