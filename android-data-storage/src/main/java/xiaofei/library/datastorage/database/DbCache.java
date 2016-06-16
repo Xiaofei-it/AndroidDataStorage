@@ -24,11 +24,11 @@ import android.support.v4.util.Pair;
 import android.text.TextUtils;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -60,10 +60,11 @@ import xiaofei.library.datastorage.util.Condition;
  * of the specified class, and if it does not, the low level simply load all the data of the specified
  * class from the database.
  *
+ * Deletion and insertion MUST be in a synchronized block!!!
  */
 public class DbCache implements IDbOperation {
 
-    private static DbCache sInstance = null;
+    private static volatile DbCache sInstance = null;
 
     private final ExecutorService mExecutorService;
 
@@ -71,11 +72,11 @@ public class DbCache implements IDbOperation {
 
     private AnnotationProcessor mAnnotationProcessor;
 
-    private final Map<String, Map<String, Object>> mCache;
+    private final ConcurrentHashMap<String, ConcurrentHashMap<String, Object>> mCache;
 
     private DbCache(Context context) {
         mExecutorService = Executors.newSingleThreadExecutor();
-        mCache = new HashMap<String, Map<String, Object>>();
+        mCache = new ConcurrentHashMap<String, ConcurrentHashMap<String, Object>>();
         try {
             mDatabase = DbService.getInstance(context);
         } catch (RuntimeException e) {
@@ -85,25 +86,30 @@ public class DbCache implements IDbOperation {
         mAnnotationProcessor = AnnotationProcessor.getInstance();
     }
 
-    static synchronized DbCache getInstance(Context context) {
+    static DbCache getInstance(Context context) {
         if (sInstance == null) {
-            sInstance = new DbCache(context);
+            synchronized (DbCache.class) {
+                if (sInstance == null) {
+                    sInstance = new DbCache(context);
+                }
+            }
         }
         return sInstance;
     }
 
-    private void sync(Class clazz) {
-        synchronized (mCache) {
-            String className = mAnnotationProcessor.getClassId(clazz);
-            if (!mCache.containsKey(className)) {
-                //TODO 此处可能会出现数据库不同步，暂时先不考虑
-                List<Pair<String, Object>> list = mDatabase == null ? new ArrayList<Pair<String, Object>>() : mDatabase.getAllObjects(clazz);
-                Map<String, Object> map = new HashMap<String, Object>();
-                for (Pair<String, Object> pair : list) {
-                    map.put(pair.first, pair.second);
-                }
-                mCache.put(className, map);
+    private <T> void sync(Class<T> clazz) {
+        String className = mAnnotationProcessor.getClassId(clazz);
+        if (!mCache.containsKey(className)) {
+            /**
+             * 线程1获取了数据，卡在put操作之前。
+             * 线程2获取了数据并且之后又塞了一个进去。
+             */
+            List<Pair<String, T>> list = mDatabase == null ? new ArrayList<Pair<String, T>>() : mDatabase.getAllObjects(clazz);
+            ConcurrentHashMap<String, Object> map = new ConcurrentHashMap<String, Object>();
+            for (Pair<String, T> pair : list) {
+                map.put(pair.first, pair.second);
             }
+            mCache.putIfAbsent(className, map);
         }
     }
 
@@ -148,22 +154,20 @@ public class DbCache implements IDbOperation {
     }
 
     @Override
-    public void deleteObject(final Class clazz, final String objectId) {
+    public <T> void deleteObject(final Class<T> clazz, final String objectId) {
         if (clazz == null || TextUtils.isEmpty(objectId)) {
             throw new IllegalArgumentException();
         }
         sync(clazz);
-        synchronized (mCache) {
-            Map<String, Object> map = mCache.get(mAnnotationProcessor.getClassId(clazz));
-            if (map.containsKey(objectId)) {
-                map.remove(objectId);
-                operateDb(new Runnable() {
-                    @Override
-                    public void run() {
-                        mDatabase.deleteObject(clazz, objectId);
-                    }
-                });
-            }
+        ConcurrentHashMap<String, Object> map = mCache.get(mAnnotationProcessor.getClassId(clazz));
+        if (map.containsKey(objectId)) {
+            map.remove(objectId);
+            operateDb(new Runnable() {
+                @Override
+                public void run() {
+                    mDatabase.deleteObject(clazz, objectId);
+                }
+            });
         }
     }
 
@@ -219,7 +223,7 @@ public class DbCache implements IDbOperation {
                 if (entry == null || entry.getKey() == null || entry.getValue() == null) {
                     continue;
                 }
-                if (condition == null || condition.satisfy((T) entry.getValue())) {
+                if (condition == null || condition.satisfy(clazz.cast(entry.getValue()))) {
                     ids.add(entry.getKey());
                 }
             }
@@ -230,15 +234,13 @@ public class DbCache implements IDbOperation {
     }
 
     @Override
-    public boolean containsObject(Class clazz, String objectId) {
+    public <T> boolean containsObject(Class<T> clazz, String objectId) {
         if (clazz == null || TextUtils.isEmpty(objectId)) {
             throw new IllegalArgumentException();
         }
         sync(clazz);
-        synchronized (mCache) {
-            Map<String, Object> map = mCache.get(mAnnotationProcessor.getClassId(clazz));
-            return map.containsKey(objectId);
-        }
+        Map<String, Object> map = mCache.get(mAnnotationProcessor.getClassId(clazz));
+        return map.containsKey(objectId);
     }
 
     @Override
@@ -266,8 +268,7 @@ public class DbCache implements IDbOperation {
         if (objects.isEmpty()) {
             return;
         }
-        //TODO
-        Class<T> clazz = (Class<T>) objects.get(0).getClass();
+        Class<?> clazz = objects.get(0).getClass();
         sync(clazz);
         synchronized (mCache) {
             String className = mAnnotationProcessor.getClassId(clazz);
@@ -299,29 +300,25 @@ public class DbCache implements IDbOperation {
             throw new IllegalArgumentException();
         }
         sync(clazz);
-        synchronized (mCache) {
-            String className = mAnnotationProcessor.getClassId(clazz);
-            Map<String, Object> map = mCache.get(className);
-            List<Pair<String, T>> result = new LinkedList<Pair<String, T>>();
-            Set<Map.Entry<String, Object>> entries = map.entrySet();
-            for (Map.Entry<String, Object> entry : entries) {
-                result.add(new Pair<String, T>(entry.getKey(), (T) entry.getValue()));
-            }
-            return result;
+        String className = mAnnotationProcessor.getClassId(clazz);
+        ConcurrentHashMap<String, Object> map = mCache.get(className);
+        List<Pair<String, T>> result = new LinkedList<Pair<String, T>>();
+        Set<Map.Entry<String, Object>> entries = map.entrySet();
+        for (Map.Entry<String, Object> entry : entries) {
+            result.add(new Pair<String, T>(entry.getKey(), clazz.cast(entry.getValue())));
         }
+        return result;
     }
 
     @Override
-    public <T> T getObject(Class<T> clazz, String objectIds) {
-        if (clazz == null || TextUtils.isEmpty(objectIds)) {
+    public <T> T getObject(Class<T> clazz, String objectId) {
+        if (clazz == null || TextUtils.isEmpty(objectId)) {
             throw new IllegalArgumentException();
         }
         sync(clazz);
-        synchronized (mCache) {
-            String className = mAnnotationProcessor.getClassId(clazz);
-            Map<String, Object> map = mCache.get(className);
-            return (T) map.get(objectIds);
-        }
+        String className = mAnnotationProcessor.getClassId(clazz);
+        ConcurrentHashMap<String, Object> map = mCache.get(className);
+        return clazz.cast(map.get(objectId));
     }
 
     @Override
@@ -330,21 +327,19 @@ public class DbCache implements IDbOperation {
             throw new IllegalArgumentException();
         }
         sync(clazz);
-        synchronized (mCache) {
-            Map<String, Object> map = mCache.get(mAnnotationProcessor.getClassId(clazz));
-            List<Pair<String, T>> result = new LinkedList<Pair<String, T>>();
-            Set<Map.Entry<String, Object>> entries = map.entrySet();
-            for (Map.Entry<String, Object> entry : entries) {
-                if (entry == null) {
-                    continue;
-                }
-                T value = (T) entry.getValue();
-                if (value != null && (condition == null || condition != null && condition.satisfy(value))) {
-                    result.add(new Pair<String, T>(entry.getKey(), value));
-                }
+        ConcurrentHashMap<String, Object> map = mCache.get(mAnnotationProcessor.getClassId(clazz));
+        List<Pair<String, T>> result = new LinkedList<Pair<String, T>>();
+        Set<Map.Entry<String, Object>> entries = map.entrySet();
+        for (Map.Entry<String, Object> entry : entries) {
+            if (entry == null) {
+                continue;
             }
-            return result;
+            T value = clazz.cast(entry.getValue());
+            if (value != null && (condition == null || condition.satisfy(value))) {
+                result.add(new Pair<String, T>(entry.getKey(), value));
+            }
         }
+        return result;
     }
 
     @Override
@@ -385,14 +380,15 @@ public class DbCache implements IDbOperation {
 
     @Override
     public void clearTable() {
-        mCache.clear();
-        operateDb(new Runnable() {
-            @Override
-            public void run() {
-                mDatabase.clearTable();
-            }
-        });
-
+        synchronized (mCache) {
+            mCache.clear();
+            operateDb(new Runnable() {
+                @Override
+                public void run() {
+                    mDatabase.clearTable();
+                }
+            });
+        }
     }
 
     public void updateAllObjects() {
@@ -401,7 +397,7 @@ public class DbCache implements IDbOperation {
             public void run() {
                 synchronized (mCache) {
                     mDatabase.clearTable();
-                    for (Map<String, Object> map : mCache.values()) {
+                    for (ConcurrentHashMap<String, Object> map : mCache.values()) {
                         if (map == null) {
                             continue;
                         }

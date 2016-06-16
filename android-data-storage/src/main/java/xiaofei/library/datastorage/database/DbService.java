@@ -40,7 +40,7 @@ public class DbService implements IDbOperation {
 
     private static final String EQUAL = "` = '";
 
-    private static DbService sInstance;
+    private static volatile DbService sInstance;
 
     private DbOpenHelper mDatabaseHelper;
 
@@ -56,9 +56,13 @@ public class DbService implements IDbOperation {
         mAnnotationProcessor = AnnotationProcessor.getInstance();
     }
 
-    static synchronized DbService getInstance(Context context) {
+    static DbService getInstance(Context context) {
         if (sInstance == null) {
-            sInstance = new DbService(context);
+            synchronized (DbService.class) {
+                if (sInstance == null) {
+                    sInstance = new DbService(context);
+                }
+            }
         }
         return sInstance;
     }
@@ -143,10 +147,10 @@ public class DbService implements IDbOperation {
     }
 
     @Override
-    public <T> T getObject(Class<T> clazz, String objectIds) {
+    public <T> T getObject(Class<T> clazz, String objectId) {
         T result = null;
         Cursor cursor = mDb.query(DbConst.TABLE_NAME, null,
-                generateEquation(DbConst.CLASS_ID, mAnnotationProcessor.getClassId(clazz)) + " and " + generateEquation(DbConst.OBJECT_ID, objectIds),
+                generateEquation(DbConst.CLASS_ID, mAnnotationProcessor.getClassId(clazz)) + " and " + generateEquation(DbConst.OBJECT_ID, objectId),
                 null, null, null, null);
         if (cursor.moveToNext()) {
             String data = cursor.getString(cursor.getColumnIndex(DbConst.OBJECT_DATA));
