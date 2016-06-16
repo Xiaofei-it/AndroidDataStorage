@@ -268,8 +268,7 @@ public class DbCache implements IDbOperation {
         if (objects.isEmpty()) {
             return;
         }
-        //TODO
-        Class<T> clazz = (Class<T>) objects.get(0).getClass();
+        Class<?> clazz = objects.get(0).getClass();
         sync(clazz);
         synchronized (mCache) {
             String className = mAnnotationProcessor.getClassId(clazz);

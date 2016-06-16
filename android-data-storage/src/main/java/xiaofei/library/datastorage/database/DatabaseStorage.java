@@ -204,7 +204,7 @@ public class DatabaseStorage implements IDataStorage {
             return;
         }
         List<String> ids = new ArrayList<String>();
-        Class<T> clazz = (Class<T>) list.get(0).getClass();
+        Class<?> clazz = list.get(0).getClass();
         for (T element : list) {
             if (element == null || element.getClass() != clazz) {
                 throw new IllegalArgumentException();
