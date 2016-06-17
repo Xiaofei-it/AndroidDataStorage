@@ -17,7 +17,7 @@ An easy-to-use framework for storing data in the Android system.（一套简洁�
 
 ```
 dependencies {
-    compile 'xiaofei.library:android-data-storage:1.1.0'
+    compile 'xiaofei.library:android-data-storage:1.2.0'
 }
 ```
 
@@ -27,7 +27,7 @@ dependencies {
 <dependency>
   <groupId>xiaofei.library</groupId>
   <artifactId>android-data-storage</artifactId>
-  <version>1.1.0</version>
+  <version>1.2.0</version>
   <type>pom</type>
 </dependency>
 ```

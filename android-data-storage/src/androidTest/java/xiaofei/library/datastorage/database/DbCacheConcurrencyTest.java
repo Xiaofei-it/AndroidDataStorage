@@ -56,7 +56,7 @@ public class DbCacheConcurrencyTest extends TestCase {
     @Before
     public void init() {
         dbCache = DbCache.getInstance(InstrumentationRegistry.getContext());
-        dbCache.deleteAllObjects(String.class);
+        dbCache.clearTable();
         assertEquals(dbCache.getAllObjects(String.class).size(), 0);
         //singleton will stay there!!!
     }
@@ -146,7 +146,8 @@ public class DbCacheConcurrencyTest extends TestCase {
          */
 
 
-        dbCache.deleteAllObjects(String.class);
+        //dbCache.deleteAllObjects(String.class);
+        dbCache.clearTable();
         assertEquals(dbCache.getAllObjects(String.class).size(), 0);
     }
 

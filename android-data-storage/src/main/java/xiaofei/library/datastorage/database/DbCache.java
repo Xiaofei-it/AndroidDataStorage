@@ -24,6 +24,7 @@ import android.support.v4.util.Pair;
 import android.text.TextUtils;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -348,7 +349,10 @@ class DbCache implements IDbOperation {
     @Override
     public void clearTable() {
         synchronized (mCache) {
-            mCache.clear();
+            Collection<ConcurrentHashMap<String, Object>> maps = mCache.values();
+            for (ConcurrentHashMap<String, Object> map : maps) {
+                map.clear();
+            }
             operateDb(new Runnable() {
                 @Override
                 public void run() {

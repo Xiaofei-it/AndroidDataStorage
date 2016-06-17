@@ -11,10 +11,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="230e864c-ae34-4026-b754-d3e06a820e06" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/exposed_instrumentation_api_publish_0_4_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/exposed_instrumentation_api_publish_0_5.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/rules_0_4_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/runner_0_5.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/runner_0_4_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/rules_0_5.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/rules_0_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/rules_0_5.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/runner_0_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/runner_0_5.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README-ZH-CN.md" afterPath="$PROJECT_DIR$/README-ZH-CN.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android-data-storage/android-data-storage.iml" afterPath="$PROJECT_DIR$/android-data-storage/android-data-storage.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android-data-storage/build.gradle" afterPath="$PROJECT_DIR$/android-data-storage/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android-data-storage/src/androidTest/java/xiaofei/library/datastorage/database/DbCacheConcurrencyTest.java" afterPath="$PROJECT_DIR$/android-data-storage/src/androidTest/java/xiaofei/library/datastorage/database/DbCacheConcurrencyTest.java" />
@@ -47,48 +48,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DbCacheConcurrencyTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DbCacheConcurrencyTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/android-data-storage/src/androidTest/java/xiaofei/library/datastorage/database/DbCacheConcurrencyTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="43" column="37" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
+            <state vertical-scroll-proportion="11.184397">
+              <caret line="149" column="29" selection-start-line="149" selection-start-column="29" selection-end-line="149" selection-end-column="29" />
               <folding>
                 <element signature="e#0#598#0" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <element signature="e#2023#2512#0" expanded="true" />
-                <element signature="e#2511#2512#0" expanded="true" />
-                <element signature="e#3065#3702#0" expanded="true" />
-                <element signature="e#3701#3702#0" expanded="true" />
+                <element signature="e#2005#2494#0" expanded="true" />
+                <element signature="e#2493#2494#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DbCacheTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DbCacheTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/android-data-storage/src/androidTest/java/xiaofei/library/datastorage/database/DbCacheTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.17857143">
-              <caret line="48" column="4" selection-start-line="48" selection-start-column="4" selection-end-line="54" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
               <folding>
                 <element signature="e#0#598#0" expanded="true" />
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DbCache.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/database/DbCache.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.37037">
-              <caret line="184" column="34" selection-start-line="184" selection-start-column="26" selection-end-line="184" selection-end-column="34" />
-              <folding>
-                <element signature="e#4243#4259#0" expanded="true" />
-                <element signature="e#6930#6931#0" expanded="true" />
-                <element signature="e#11158#11175#0" expanded="true" />
-                <element signature="e#12208#12225#0" expanded="true" />
-                <element signature="e#13785#13793#0" expanded="true" />
-                <element signature="e#13857#13865#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -98,8 +80,46 @@
         <entry file="file://$PROJECT_DIR$/android-data-storage/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+              <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README-ZH-CN.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README-ZH-CN.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.3333335">
+              <caret line="32" column="14" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.814815">
+              <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DbCache.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/database/DbCache.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="352" column="34" selection-start-line="352" selection-start-column="17" selection-end-line="352" selection-end-column="34" />
+              <folding>
+                <element signature="e#4272#4288#0" expanded="true" />
+                <element signature="e#6795#6960#0" expanded="true" />
+                <element signature="e#6959#6960#0" expanded="true" />
+                <element signature="e#11187#11204#0" expanded="true" />
+                <element signature="e#12237#12254#0" expanded="true" />
+                <element signature="e#13976#13984#0" expanded="true" />
+                <element signature="e#14048#14056#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -883,9 +903,9 @@
                 <option name="name" value="prePackageMarkerForRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare xiaofei.library:android-data-storage:1.1.1" />
+                <option name="description" value="Prepare xiaofei.library:android-data-storage:1.2.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareXiaofeiLibraryAndroidDataStorage111Library" />
+                <option name="name" value="prepareXiaofeiLibraryAndroidDataStorage120Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
@@ -2083,9 +2103,9 @@
                 <option name="name" value="prepareReleaseUnitTestDependencies" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare xiaofei.library:android-data-storage:1.1.1" />
+                <option name="description" value="Prepare xiaofei.library:android-data-storage:1.2.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="prepareXiaofeiLibraryAndroidDataStorage111Library" />
+                <option name="name" value="prepareXiaofeiLibraryAndroidDataStorage120Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
@@ -2250,7 +2270,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="5859464814000" />
+        <entry key="$PROJECT_DIR$" value="5859475534000" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -2881,8 +2901,6 @@
         <option value="$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/database/DbConfig.java" />
         <option value="$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/util/CodeUtils.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/README-ZH-CN.md" />
         <option value="$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/annotation/AnnotationProcessor.java" />
         <option value="$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/database/DatabaseStorage.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
@@ -2893,12 +2911,14 @@
         <option value="$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/database/DbConst.java" />
         <option value="$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/database/IDbOperation.java" />
         <option value="$PROJECT_DIR$/android-data-storage/src/androidTest/java/xiaofei/library/datastorage/database/DbCacheTest.java" />
-        <option value="$PROJECT_DIR$/android-data-storage/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_concurrency_test.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/xiaofei/library/datastoragetest/ConcurrencyTestActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/xiaofei/library/datastoragetest/MainActivity.java" />
+        <option value="$PROJECT_DIR$/android-data-storage/build.gradle" />
+        <option value="$PROJECT_DIR$/README-ZH-CN.md" />
+        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/database/DbCache.java" />
         <option value="$PROJECT_DIR$/android-data-storage/src/androidTest/java/xiaofei/library/datastorage/database/DbCacheConcurrencyTest.java" />
       </list>
@@ -3405,7 +3425,7 @@
       <recent name="$PROJECT_DIR$/datastorage/src/main/java/xiaofei/library/datastorage" />
     </key>
   </component>
-  <component name="RunManager" selected="Android Tests.DbCacheTest">
+  <component name="RunManager" selected="Android Tests.DbCacheConcurrencyTe...">
     <configuration default="false" name="Test01" type="AndroidTestRunConfigurationType" factoryName="Android Tests" temporary="true" nameIsGenerated="true">
       <module name="android-data-storage" />
       <option name="TESTING_TYPE" value="2" />
@@ -3791,21 +3811,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DbCacheConcurrencyTe___ - 2016.06.17 at 21h 16m 36s.xml">
-      <configuration name="DbCacheConcurrencyTe..." configurationId="AndroidTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="DbCacheConcurrencyTe___ - 2016.06.17 at 21h 17m 26s.xml">
-      <configuration name="DbCacheConcurrencyTe..." configurationId="AndroidTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="DbCacheConcurrencyTe___ - 2016.06.17 at 21h 18m 55s.xml">
-      <configuration name="DbCacheConcurrencyTe..." configurationId="AndroidTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="DbCacheConcurrencyTe___ - 2016.06.17 at 21h 19m 23s.xml">
-      <configuration name="DbCacheConcurrencyTe..." configurationId="AndroidTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="DbCacheConcurrencyTe___ - 2016.06.17 at 21h 20m 03s.xml">
-      <configuration name="DbCacheConcurrencyTe..." configurationId="AndroidTestRunConfigurationType" />
-    </history-entry>
     <history-entry file="DbCacheConcurrencyTe___ - 2016.06.17 at 21h 20m 14s.xml">
       <configuration name="DbCacheConcurrencyTe..." configurationId="AndroidTestRunConfigurationType" />
     </history-entry>
@@ -3821,6 +3826,21 @@
     <history-entry file="DbCacheConcurrencyTe___ - 2016.06.17 at 21h 28m 31s.xml">
       <configuration name="DbCacheConcurrencyTe..." configurationId="AndroidTestRunConfigurationType" />
     </history-entry>
+    <history-entry file="DbCacheConcurrencyTe___ - 2016.06.17 at 21h 28m 52s.xml">
+      <configuration name="DbCacheConcurrencyTe..." configurationId="AndroidTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="DbCacheTest - 2016.06.17 at 21h 29m 06s.xml">
+      <configuration name="DbCacheTest" configurationId="AndroidTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="DbCacheTest - 2016.06.17 at 21h 32m 52s.xml">
+      <configuration name="DbCacheTest" configurationId="AndroidTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="DbCacheTest - 2016.06.17 at 21h 37m 42s.xml">
+      <configuration name="DbCacheTest" configurationId="AndroidTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="DbCacheTest - 2016.06.17 at 22h 13m 52s.xml">
+      <configuration name="DbCacheTest" configurationId="AndroidTestRunConfigurationType" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="709" extended-state="0" />
@@ -3835,7 +3855,7 @@
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6694772" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32715008" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6694772" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6694772" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6694772" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -4021,20 +4041,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README-ZH-CN.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.877193">
-          <caret line="22" column="55" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39473686">
-          <caret line="19" column="55" selection-start-line="19" selection-start-column="55" selection-end-line="19" selection-end-column="55" />
         </state>
       </provider>
     </entry>
@@ -4302,51 +4308,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README-ZH-CN.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.3333335">
+          <caret line="32" column="14" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.814815">
+          <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/android-data-storage/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/database/DbCache.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.37037">
-          <caret line="184" column="34" selection-start-line="184" selection-start-column="26" selection-end-line="184" selection-end-column="34" />
-          <folding>
-            <element signature="e#4243#4259#0" expanded="true" />
-            <element signature="e#6930#6931#0" expanded="true" />
-            <element signature="e#11158#11175#0" expanded="true" />
-            <element signature="e#12208#12225#0" expanded="true" />
-            <element signature="e#13785#13793#0" expanded="true" />
-            <element signature="e#13857#13865#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android-data-storage/src/androidTest/java/xiaofei/library/datastorage/database/DbCacheConcurrencyTest.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="37" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
+          <caret line="352" column="34" selection-start-line="352" selection-start-column="17" selection-end-line="352" selection-end-column="34" />
           <folding>
-            <element signature="e#0#598#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#2023#2512#0" expanded="true" />
-            <element signature="e#2511#2512#0" expanded="true" />
-            <element signature="e#3065#3702#0" expanded="true" />
-            <element signature="e#3701#3702#0" expanded="true" />
+            <element signature="e#4272#4288#0" expanded="true" />
+            <element signature="e#6795#6960#0" expanded="true" />
+            <element signature="e#6959#6960#0" expanded="true" />
+            <element signature="e#11187#11204#0" expanded="true" />
+            <element signature="e#12237#12254#0" expanded="true" />
+            <element signature="e#13976#13984#0" expanded="true" />
+            <element signature="e#14048#14056#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/android-data-storage/src/androidTest/java/xiaofei/library/datastorage/database/DbCacheTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17857143">
-          <caret line="48" column="4" selection-start-line="48" selection-start-column="4" selection-end-line="54" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
           <folding>
             <element signature="e#0#598#0" expanded="true" />
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android-data-storage/src/androidTest/java/xiaofei/library/datastorage/database/DbCacheConcurrencyTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="11.184397">
+          <caret line="149" column="29" selection-start-line="149" selection-start-column="29" selection-end-line="149" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#598#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#2005#2494#0" expanded="true" />
+            <element signature="e#2493#2494#0" expanded="true" />
           </folding>
         </state>
       </provider>
