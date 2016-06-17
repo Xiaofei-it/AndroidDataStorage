@@ -159,15 +159,17 @@ class DbCache implements IDbOperation {
             throw new IllegalArgumentException();
         }
         sync(clazz);
-        ConcurrentHashMap<String, Object> map = mCache.get(mAnnotationProcessor.getClassId(clazz));
-        if (map.containsKey(objectId)) {
-            map.remove(objectId);
-            operateDb(new Runnable() {
-                @Override
-                public void run() {
-                    mDatabase.deleteObject(clazz, objectId);
-                }
-            });
+        synchronized (mCache) {
+            ConcurrentHashMap<String, Object> map = mCache.get(mAnnotationProcessor.getClassId(clazz));
+            if (map.containsKey(objectId)) {
+                map.remove(objectId);
+                operateDb(new Runnable() {
+                    @Override
+                    public void run() {
+                        mDatabase.deleteObject(clazz, objectId);
+                    }
+                });
+            }
         }
     }
 
@@ -178,7 +180,8 @@ class DbCache implements IDbOperation {
         }
         sync(clazz);
         synchronized (mCache) {
-            mCache.remove(mAnnotationProcessor.getClassId(clazz));
+            ConcurrentHashMap<String, Object> map = mCache.get(mAnnotationProcessor.getClassId(clazz));
+            map.clear();
             operateDb(new Runnable() {
                 @Override
                 public void run() {
