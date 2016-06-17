@@ -62,7 +62,7 @@ import xiaofei.library.datastorage.util.Condition;
  *
  * Deletion and insertion MUST be in a synchronized block!!!
  */
-public class DbCache implements IDbOperation {
+class DbCache implements IDbOperation {
 
     private static volatile DbCache sInstance = null;
 
@@ -343,42 +343,6 @@ public class DbCache implements IDbOperation {
     }
 
     @Override
-    public <T> void replaceObjects(final Class<T> clazz, final List<String> oldObjectIds,
-                                   final List<T> newObjects, final List<String> newObjectIds) {
-        if (clazz == null || oldObjectIds == null || newObjects == null || newObjectIds == null) {
-            throw new IllegalArgumentException();
-        }
-        if (newObjects.size() != newObjectIds.size()) {
-            throw new IllegalArgumentException();
-        }
-        sync(clazz);
-        synchronized (mCache) {
-            Map<String, Object> map = mCache.get(mAnnotationProcessor.getClassId(clazz));
-            for (String id : oldObjectIds) {
-                if (id == null) {
-                    throw new IllegalArgumentException();
-                }
-                map.remove(id);
-            }
-            int size = newObjects.size();
-            for (int i = 0; i < size; ++i) {
-                String id = newObjectIds.get(i);
-                T value = newObjects.get(i);
-                if (id == null || value == null) {
-                    throw new IllegalArgumentException();
-                }
-                map.put(id, value);
-            }
-            operateDb(new Runnable() {
-                @Override
-                public void run() {
-                    mDatabase.replaceObjects(clazz, oldObjectIds, newObjects, newObjectIds);
-                }
-            });
-        }
-    }
-
-    @Override
     public void clearTable() {
         synchronized (mCache) {
             mCache.clear();
@@ -388,6 +352,15 @@ public class DbCache implements IDbOperation {
                     mDatabase.clearTable();
                 }
             });
+        }
+    }
+
+    /**
+     * For unit test only!!!
+     */
+    void clearCache() {
+        synchronized (mCache) {
+            mCache.clear();
         }
     }
 

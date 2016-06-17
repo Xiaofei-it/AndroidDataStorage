@@ -30,7 +30,7 @@ import xiaofei.library.datastorage.util.Condition;
  * This interface defines basic methods of database operations.
  *
  */
-public interface IDbOperation {
+interface IDbOperation {
 
     /**
      * Return true if the table contains the object of the specified class and
@@ -124,17 +124,6 @@ public interface IDbOperation {
      * @param <T>
      */
     <T> void deleteAllObjects(Class<T> clazz);
-
-    /**
-     * Replace the objects of the old object ids with the objects of the new object ids.
-     *
-     * @param clazz
-     * @param oldObjectIds
-     * @param newObjects
-     * @param newObjectIds
-     * @param <T>
-     */
-    <T> void replaceObjects(Class<T> clazz, List<String> oldObjectIds, List<T> newObjects, List<String> newObjectIds);
 
     /**
      * Close the database.

@@ -21,7 +21,7 @@ package xiaofei.library.datastorage.database;
 /**
  * Created by Xiaofei on 15/11/11.
  */
-public class DbConst {
+class DbConst {
 
     public static final String TABLE_NAME = "data_storage";
 

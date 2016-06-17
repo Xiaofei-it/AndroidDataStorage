@@ -34,7 +34,7 @@ import xiaofei.library.datastorage.util.Condition;
  * DbService performs database operations. It is not thread-safe.
  *
  */
-public class DbService implements IDbOperation {
+class DbService implements IDbOperation {
 
     private Coder mCoder = null;
 
@@ -187,18 +187,6 @@ public class DbService implements IDbOperation {
             }
         }
         return result;
-    }
-
-    @Override
-    public <T> void replaceObjects(final Class<T> clazz, final List<String> oldObjectIds,
-                                   final List<T> newObjects, final List<String> newObjectIds) {
-        executeInTransaction(new Runnable() {
-            @Override
-            public void run() {
-                deleteObjects(clazz, oldObjectIds);
-                insertObjects(newObjects, newObjectIds);
-            }
-        });
     }
 
     @Override
