@@ -1,6 +1,6 @@
 # AndroidDataStorage
 
-一套简洁易用的安卓系统存储框架
+一个简洁易用并且具有高性能的Android存储库
 
 ##特色
 
