@@ -10,7 +10,7 @@ ext {
     libraryName = 'AndroidDataStorage'
     artifact = 'android-data-storage'
 
-    libraryDescription = 'An easy-to-use framework for storing data in the Android system.'
+    libraryDescription = 'An easy-to-use and high-performance library for storing data in the Android system.'
 
     siteUrl = 'https://github.com/Xiaofei-it/AndroidDataStorage'
     gitUrl = 'https://github.com/Xiaofei-it/AndroidDataStorage.git'
