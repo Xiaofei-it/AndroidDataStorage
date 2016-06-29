@@ -121,7 +121,7 @@ public class DatabaseStorage implements IDataStorage {
         for (T element : list) {
             String id = mAnnotationProcessor.getObjectId(element);
             if (id == null) {
-                throw new RuntimeException("Element " + element + " has not initialized its ID.");
+                throw new IllegalArgumentException("Element " + element + " has not initialized its ID.");
             }
             ids.add(id);
         }
@@ -197,9 +197,6 @@ public class DatabaseStorage implements IDataStorage {
 
     @Override
     public <T> void delete(List<T> list) {
-        if (list == null) {
-            throw new IllegalArgumentException();
-        }
         if (list.isEmpty()) {
             return;
         }
@@ -207,7 +204,7 @@ public class DatabaseStorage implements IDataStorage {
         Class<?> clazz = list.get(0).getClass();
         for (T element : list) {
             if (element == null || element.getClass() != clazz) {
-                throw new IllegalArgumentException();
+                throw new IllegalArgumentException("Element " + element + " has the different type from others.");
             }
             ids.add(mAnnotationProcessor.getObjectId(element));
         }

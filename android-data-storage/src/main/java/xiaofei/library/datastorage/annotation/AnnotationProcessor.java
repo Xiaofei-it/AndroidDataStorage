@@ -60,7 +60,7 @@ public class AnnotationProcessor {
      */
     public String getClassId(Class<?> clazz) {
         if (clazz == null) {
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException("Class cannot be null.");
         }
         String className = mClassIdMap.get(clazz);
         if (className != null) {
@@ -73,9 +73,6 @@ public class AnnotationProcessor {
     }
 
     public String getObjectId(Object object) {
-        if (object == null) {
-            throw new IllegalArgumentException();
-        }
         Class<?> clazz = object.getClass();
         Member member = mObjectIdMap.get(clazz);
         if (member != null) {

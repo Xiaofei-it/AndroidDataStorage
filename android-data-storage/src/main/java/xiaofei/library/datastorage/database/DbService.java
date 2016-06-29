@@ -181,11 +181,12 @@ class DbService implements IDbOperation {
             if (object == null) {
                 continue;
             }
-            if (condition == null || condition != null && condition.satisfy(object)) {
+            if (condition == null || condition.satisfy(object)) {
                 String id = cursor.getString(cursor.getColumnIndex(DbConst.OBJECT_ID));
                 result.add(new Pair<String, T>(id, object));
             }
         }
+        cursor.close();
         return result;
     }
 
@@ -222,9 +223,6 @@ class DbService implements IDbOperation {
     }
 
     public void executeInTransaction(Runnable runnable) {
-        if (runnable == null) {
-            throw new IllegalArgumentException();
-        }
         try {
             mDb.beginTransaction();
             try {

@@ -156,9 +156,6 @@ class DbCache implements IDbOperation {
 
     @Override
     public <T> void deleteObject(final Class<T> clazz, final String objectId) {
-        if (clazz == null || TextUtils.isEmpty(objectId)) {
-            throw new IllegalArgumentException();
-        }
         sync(clazz);
         synchronized (mCache) {
             ConcurrentHashMap<String, Object> map = mCache.get(mAnnotationProcessor.getClassId(clazz));
@@ -176,9 +173,6 @@ class DbCache implements IDbOperation {
 
     @Override
     public <T> void deleteAllObjects(final Class<T> clazz) {
-        if (clazz == null) {
-            throw new IllegalArgumentException();
-        }
         sync(clazz);
         synchronized (mCache) {
             ConcurrentHashMap<String, Object> map = mCache.get(mAnnotationProcessor.getClassId(clazz));
@@ -194,9 +188,6 @@ class DbCache implements IDbOperation {
 
     @Override
     public <T> void deleteObjects(final Class<T> clazz, final List<String> objectIds) {
-        if (clazz == null || objectIds == null) {
-            throw new IllegalArgumentException();
-        }
         sync(clazz);
         synchronized (mCache) {
             Map<String, Object> map = mCache.get(mAnnotationProcessor.getClassId(clazz));
@@ -215,9 +206,6 @@ class DbCache implements IDbOperation {
     }
 
     public <T> void deleteObjects(Class<T> clazz, Condition<T> condition) {
-        if (clazz == null) {
-            throw new IllegalArgumentException();
-        }
         sync(clazz);
         synchronized (mCache) {
             Map<String, Object> map = mCache.get(mAnnotationProcessor.getClassId(clazz));
@@ -239,9 +227,6 @@ class DbCache implements IDbOperation {
 
     @Override
     public <T> boolean containsObject(Class<T> clazz, String objectId) {
-        if (clazz == null || TextUtils.isEmpty(objectId)) {
-            throw new IllegalArgumentException();
-        }
         sync(clazz);
         Map<String, Object> map = mCache.get(mAnnotationProcessor.getClassId(clazz));
         return map.containsKey(objectId);
@@ -249,8 +234,8 @@ class DbCache implements IDbOperation {
 
     @Override
     public <T> void insertObject(final T object, final String objectId) {
-        if (object == null || TextUtils.isEmpty(objectId)) {
-            throw new IllegalArgumentException();
+        if (TextUtils.isEmpty(objectId)) {
+            throw new IllegalArgumentException("Illegal object id!");
         }
         sync(object.getClass());
         synchronized (mCache) {
@@ -266,8 +251,8 @@ class DbCache implements IDbOperation {
 
     @Override
     public <T> void insertObjects(final List<T> objects, final List<String> objectIds) {
-        if (objects == null || objectIds == null || objects.size() != objectIds.size()) {
-            throw new IllegalArgumentException();
+        if (objects.size() != objectIds.size()) {
+            throw new IllegalArgumentException("Two lists have different sizes.");
         }
         if (objects.isEmpty()) {
             return;
@@ -282,10 +267,10 @@ class DbCache implements IDbOperation {
                 String id = objectIds.get(i);
                 T value = objects.get(i);
                 if (value == null || TextUtils.isEmpty(id)) {
-                    throw new IllegalArgumentException();
+                    throw new IllegalArgumentException("Object is null or id is null.");
                 }
                 if (value.getClass() != clazz) {
-                    throw new IllegalArgumentException();
+                    throw new IllegalArgumentException("Object type is different from others.");
                 }
                 map.put(id, value);
             }
@@ -300,9 +285,6 @@ class DbCache implements IDbOperation {
 
     @Override
     public <T> List<Pair<String, T>> getAllObjects(Class<T> clazz) {
-        if (clazz == null) {
-            throw new IllegalArgumentException();
-        }
         sync(clazz);
         String className = mAnnotationProcessor.getClassId(clazz);
         ConcurrentHashMap<String, Object> map = mCache.get(className);
@@ -316,9 +298,6 @@ class DbCache implements IDbOperation {
 
     @Override
     public <T> T getObject(Class<T> clazz, String objectId) {
-        if (clazz == null || TextUtils.isEmpty(objectId)) {
-            throw new IllegalArgumentException();
-        }
         sync(clazz);
         String className = mAnnotationProcessor.getClassId(clazz);
         ConcurrentHashMap<String, Object> map = mCache.get(className);
@@ -327,9 +306,6 @@ class DbCache implements IDbOperation {
 
     @Override
     public <T> List<Pair<String, T>> getObjects(Class<T> clazz, Condition<T> condition) {
-        if (clazz == null) {
-            throw new IllegalArgumentException();
-        }
         sync(clazz);
         ConcurrentHashMap<String, Object> map = mCache.get(mAnnotationProcessor.getClassId(clazz));
         List<Pair<String, T>> result = new LinkedList<Pair<String, T>>();

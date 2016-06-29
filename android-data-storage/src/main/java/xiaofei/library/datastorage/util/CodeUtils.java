@@ -35,8 +35,8 @@ public class CodeUtils {
     }
 
     public static String encode(byte[] input) {
-        if (input == null || input.length < 0) {
-            throw new IllegalArgumentException();
+        if (input.length < 0) {
+            throw new IllegalArgumentException("Input length is less than 0.");
         }
         StringBuilder result = new StringBuilder();
         int len = input.length;
@@ -51,9 +51,6 @@ public class CodeUtils {
     }
 
     public static byte[] decode(String input) {
-        if (input == null) {
-            throw new IllegalArgumentException("Input error.");
-        }
         int len = input.length();
         if (len < 0 || len % 2 != 0) {
             throw new IllegalArgumentException("Input error.");
