@@ -43,7 +43,7 @@ import java.util.concurrent.locks.ReentrantLock;
 @RunWith(AndroidJUnit4.class)
 public class DbCacheConcurrency2Test extends TestCase {
 
-    private static final int MAX = 50;
+    private static final int MAX = 20;
 
     private DbCache dbCache;
 

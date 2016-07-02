@@ -12,13 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="230e864c-ae34-4026-b754-d3e06a820e06" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/concurrent_utils_0_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-data-storage/src/androidTest/java/xiaofei/library/datastorage/database/DbCacheConcurrency2Test.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/concurrent_utils_0_1_1.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android-data-storage/android-data-storage.iml" afterPath="$PROJECT_DIR$/android-data-storage/android-data-storage.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android-data-storage/build.gradle" afterPath="$PROJECT_DIR$/android-data-storage/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android-data-storage/src/androidTest/java/xiaofei/library/datastorage/database/DbCacheConcurrency2Test.java" afterPath="$PROJECT_DIR$/android-data-storage/src/androidTest/java/xiaofei/library/datastorage/database/DbCacheConcurrency2Test.java" />
     </list>
     <ignored path="AndroidDataStorage.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,26 +41,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/android-data-storage/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.0238094">
-              <caret line="55" column="51" selection-start-line="55" selection-start-column="51" selection-end-line="55" selection-end-column="51" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DbCacheConcurrency2Test.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DbCacheConcurrency2Test.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/android-data-storage/src/androidTest/java/xiaofei/library/datastorage/database/DbCacheConcurrency2Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="47" column="36" selection-start-line="47" selection-start-column="36" selection-end-line="47" selection-end-column="36" />
+            <state vertical-scroll-proportion="1.8928572">
+              <caret line="45" column="36" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
               <folding>
-                <element signature="e#2124#3248#0" expanded="true" />
-                <element signature="e#2680#2977#0" expanded="true" />
-                <element signature="e#2976#2977#0" expanded="true" />
-                <element signature="e#3247#3248#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#2065#3189#0" expanded="true" />
+                <element signature="e#2621#2918#0" expanded="true" />
+                <element signature="e#2917#2918#0" expanded="true" />
+                <element signature="e#3188#3189#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -3445,7 +3441,7 @@
       <recent name="$PROJECT_DIR$/datastorage/src/main/java/xiaofei/library/datastorage" />
     </key>
   </component>
-  <component name="RunManager" selected="Android Tests.insert()">
+  <component name="RunManager" selected="Android Tests.DbCacheConcurrency2T...">
     <configuration default="false" name="DbCacheTest" type="AndroidTestRunConfigurationType" factoryName="Android Tests" temporary="true" nameIsGenerated="true">
       <module name="android-data-storage" />
       <option name="TESTING_TYPE" value="2" />
@@ -3512,39 +3508,6 @@
       </Profilers>
       <method />
     </configuration>
-    <configuration default="false" name="storeAndLoad()" type="AndroidTestRunConfigurationType" factoryName="Android Tests" temporary="true" nameIsGenerated="true">
-      <module name="android-data-storage" />
-      <option name="TESTING_TYPE" value="3" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="android.support.test.runner.AndroidJUnitRunner" />
-      <option name="METHOD_NAME" value="storeAndLoad" />
-      <option name="CLASS_NAME" value="xiaofei.library.datastorage.database.DbCacheTest" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="EXTRA_OPTIONS" value="" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="DEBUGGER_TYPE" value="Java" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
-      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
-      <Native>
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-      </Native>
-      <Java />
-      <Hybrid>
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-      </Hybrid>
-      <Profilers>
-        <option name="GAPID_DISABLE_PCS" value="false" />
-      </Profilers>
-      <method />
-    </configuration>
     <configuration default="false" name="insert()" type="AndroidTestRunConfigurationType" factoryName="Android Tests" temporary="true" nameIsGenerated="true">
       <module name="android-data-storage" />
       <option name="TESTING_TYPE" value="3" />
@@ -3583,6 +3546,39 @@
       <option name="TESTING_TYPE" value="3" />
       <option name="INSTRUMENTATION_RUNNER_CLASS" value="android.support.test.runner.AndroidJUnitRunner" />
       <option name="METHOD_NAME" value="insertAndClear" />
+      <option name="CLASS_NAME" value="xiaofei.library.datastorage.database.DbCacheConcurrency2Test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="true" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <Native>
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+      </Native>
+      <Java />
+      <Hybrid>
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+      </Hybrid>
+      <Profilers>
+        <option name="GAPID_DISABLE_PCS" value="false" />
+      </Profilers>
+      <method />
+    </configuration>
+    <configuration default="false" name="DbCacheConcurrency2T..." type="AndroidTestRunConfigurationType" factoryName="Android Tests" temporary="true" nameIsGenerated="true">
+      <module name="android-data-storage" />
+      <option name="TESTING_TYPE" value="2" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="android.support.test.runner.AndroidJUnitRunner" />
+      <option name="METHOD_NAME" value="" />
       <option name="CLASS_NAME" value="xiaofei.library.datastorage.database.DbCacheConcurrency2Test" />
       <option name="PACKAGE_NAME" value="" />
       <option name="EXTRA_OPTIONS" value="" />
@@ -3861,17 +3857,17 @@
       <item index="0" class="java.lang.String" itemvalue="Android Application.app" />
       <item index="1" class="java.lang.String" itemvalue="Android Tests.DbCacheTest" />
       <item index="2" class="java.lang.String" itemvalue="Android Tests.DbCacheConcurrencyTe..." />
-      <item index="3" class="java.lang.String" itemvalue="Android Tests.storeAndLoad()" />
-      <item index="4" class="java.lang.String" itemvalue="Android Tests.insert()" />
-      <item index="5" class="java.lang.String" itemvalue="Android Tests.insertAndClear()" />
+      <item index="3" class="java.lang.String" itemvalue="Android Tests.insert()" />
+      <item index="4" class="java.lang.String" itemvalue="Android Tests.insertAndClear()" />
+      <item index="5" class="java.lang.String" itemvalue="Android Tests.DbCacheConcurrency2T..." />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Android Tests.insert()" />
-        <item index="1" class="java.lang.String" itemvalue="Android Tests.insertAndClear()" />
-        <item index="2" class="java.lang.String" itemvalue="Android Tests.DbCacheConcurrencyTe..." />
-        <item index="3" class="java.lang.String" itemvalue="Android Tests.DbCacheTest" />
-        <item index="4" class="java.lang.String" itemvalue="Android Tests.storeAndLoad()" />
+        <item index="0" class="java.lang.String" itemvalue="Android Tests.DbCacheConcurrency2T..." />
+        <item index="1" class="java.lang.String" itemvalue="Android Tests.insert()" />
+        <item index="2" class="java.lang.String" itemvalue="Android Tests.insertAndClear()" />
+        <item index="3" class="java.lang.String" itemvalue="Android Tests.DbCacheConcurrencyTe..." />
+        <item index="4" class="java.lang.String" itemvalue="Android Tests.DbCacheTest" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="Applet" default="true" selected="false">
@@ -3901,9 +3897,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="insert() - 2016.07.02 at 21h 05m 36s.xml">
-      <configuration name="insert()" configurationId="AndroidTestRunConfigurationType" />
-    </history-entry>
     <history-entry file="insert() - 2016.07.02 at 21h 06m 47s.xml">
       <configuration name="insert()" configurationId="AndroidTestRunConfigurationType" />
     </history-entry>
@@ -3928,6 +3921,9 @@
     <history-entry file="insert() - 2016.07.02 at 21h 16m 53s.xml">
       <configuration name="insert()" configurationId="AndroidTestRunConfigurationType" />
     </history-entry>
+    <history-entry file="insert() - 2016.07.02 at 21h 21m 35s.xml">
+      <configuration name="insert()" configurationId="AndroidTestRunConfigurationType" />
+    </history-entry>
     <history-entry file="insertAndClear() - 2016.07.02 at 21h 19m 11s.xml">
       <configuration name="insertAndClear()" configurationId="AndroidTestRunConfigurationType" />
     </history-entry>
@@ -3944,13 +3940,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6694772" sideWeight="0.509693" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6694772" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32715008" sideWeight="0.49676898" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6694772" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6694772" sideWeight="0.49030694" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6694772" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6694772" sideWeight="0.49030694" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -4048,7 +4044,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/android-data-storage/src/androidTest/java/xiaofei/library/datastorage/database/DbCacheConcurrency2Test.java</url>
-          <line>75</line>
+          <line>73</line>
           <properties />
           <option name="timeStamp" value="43" />
         </line-breakpoint>
@@ -4459,24 +4455,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/android-data-storage/src/androidTest/java/xiaofei/library/datastorage/database/DbCacheConcurrency2Test.java">
+    <entry file="file://$PROJECT_DIR$/android-data-storage/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="47" column="36" selection-start-line="47" selection-start-column="36" selection-end-line="47" selection-end-column="36" />
-          <folding>
-            <element signature="e#2124#3248#0" expanded="true" />
-            <element signature="e#2680#2977#0" expanded="true" />
-            <element signature="e#2976#2977#0" expanded="true" />
-            <element signature="e#3247#3248#0" expanded="true" />
-          </folding>
+          <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/android-data-storage/build.gradle">
+    <entry file="file://$PROJECT_DIR$/android-data-storage/src/androidTest/java/xiaofei/library/datastorage/database/DbCacheConcurrency2Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.0238094">
-          <caret line="55" column="51" selection-start-line="55" selection-start-column="51" selection-end-line="55" selection-end-column="51" />
-          <folding />
+        <state vertical-scroll-proportion="1.8928572">
+          <caret line="45" column="36" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2065#3189#0" expanded="true" />
+            <element signature="e#2621#2918#0" expanded="true" />
+            <element signature="e#2917#2918#0" expanded="true" />
+            <element signature="e#3188#3189#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
