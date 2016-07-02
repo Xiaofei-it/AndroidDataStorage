@@ -53,7 +53,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.3.0'
     compile 'com.google.code.gson:gson:2.5'
-    compile 'xiaofei.library:concurrent-utils:0.1.1'
+    compile 'xiaofei.library:concurrent-utils:0.1.2'
     androidTestCompile 'com.android.support:support-annotations:23.3.0'
     androidTestCompile 'com.android.support.test:runner:0.5'
     androidTestCompile 'com.android.support.test:rules:0.5'
