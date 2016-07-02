@@ -46,21 +46,13 @@ public class DbCacheTest extends TestCase {
         //singleton will stay there!!!
     }
 
-    private void sleep() {
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
-
     @Test
     public void storeAndLoad() {
         dbCache.insertObject("ok", "1");
         dbCache.clearCache();
-        sleep();
         String str = dbCache.getObject(String.class, "1");
         assertEquals(str, "ok");
+
         dbCache.clearCache();
         List<Object> list1 = new ArrayList<>();
         List<String> list2 = new ArrayList<>();
@@ -70,9 +62,9 @@ public class DbCacheTest extends TestCase {
         list2.add("3");
         dbCache.insertObjects(list1, list2);
         dbCache.clearCache();
-        sleep();
         List<Pair<String, String>> stringList = dbCache.getAllObjects(String.class);
         assertEquals(stringList.size(), 3);
+
         dbCache.clearCache();
         stringList = dbCache.getObjects(String.class, new Condition<String>() {
             @Override
@@ -81,20 +73,21 @@ public class DbCacheTest extends TestCase {
             }
         });
         assertEquals(stringList.size(), 3);
+
         dbCache.clearCache();
         dbCache.deleteObject(String.class, "1");
         dbCache.clearCache();
-        sleep();
         stringList = dbCache.getAllObjects(String.class);
         assertEquals(stringList.size(), 2);
+
         dbCache.clearCache();
         dbCache.insertObject("C", "4");
         dbCache.clearCache();
         dbCache.deleteObjects(String.class, list2);
         dbCache.clearCache();
-        sleep();
         stringList = dbCache.getAllObjects(String.class);
         assertEquals(stringList.size(), 1);
+
         dbCache.clearCache();
         dbCache.deleteObjects(String.class, new Condition<String>() {
             @Override
@@ -104,18 +97,19 @@ public class DbCacheTest extends TestCase {
         });
         stringList = dbCache.getAllObjects(String.class);
         assertEquals(stringList.size(), 0);
+
         dbCache.insertObject("A", "1");
         dbCache.insertObject("B", "2");
         dbCache.clearCache();
-        sleep();
         stringList = dbCache.getAllObjects(String.class);
         assertEquals(stringList.size(), 2);
+
         dbCache.clearCache();
         dbCache.deleteAllObjects(String.class);
         dbCache.clearCache();
-        sleep();
         stringList = dbCache.getAllObjects(String.class);
         assertEquals(stringList.size(), 0);
+
     }
 
 }
