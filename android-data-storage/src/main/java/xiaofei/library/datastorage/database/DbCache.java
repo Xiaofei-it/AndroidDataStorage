@@ -33,6 +33,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+import xiaofei.library.concurrentutils.ObjectCanary;
 import xiaofei.library.datastorage.annotation.AnnotationProcessor;
 import xiaofei.library.datastorage.util.Condition;
 
@@ -98,14 +99,29 @@ class DbCache implements IDbOperation {
         return sInstance;
     }
 
-    private <T> void sync(Class<T> clazz) {
+    private <T> void sync(final Class<T> clazz) {
         String className = mAnnotationProcessor.getClassId(clazz);
         if (!mCache.containsKey(className)) {
             /**
              * 线程1获取了数据，卡在put操作之前。
              * 线程2获取了数据并且之后又塞了一个进去。
              */
-            List<Pair<String, T>> list = mDatabase == null ? new ArrayList<Pair<String, T>>() : mDatabase.getAllObjects(clazz);
+            List<Pair<String, T>> list;
+            if (mDatabase == null) {
+                list = new ArrayList<Pair<String, T>>();
+            } else {
+                /**
+                 * The following fix a bug.
+                 */
+                final ObjectCanary<List<Pair<String, T>>> listCanary = new ObjectCanary<List<Pair<String, T>>>();
+                operateDb(new Runnable() {
+                    @Override
+                    public void run() {
+                        listCanary.set(mDatabase.getAllObjects(clazz));
+                    }
+                });
+                list = listCanary.getNonNull();
+            }
             ConcurrentHashMap<String, Object> map = new ConcurrentHashMap<String, Object>();
             for (Pair<String, T> pair : list) {
                 map.put(pair.first, pair.second);

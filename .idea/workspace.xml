@@ -11,13 +11,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="230e864c-ae34-4026-b754-d3e06a820e06" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/concurrent_utils_0_1_0.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android-data-storage/android-data-storage.iml" afterPath="$PROJECT_DIR$/android-data-storage/android-data-storage.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/annotation/AnnotationProcessor.java" afterPath="$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/annotation/AnnotationProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/database/DatabaseStorage.java" afterPath="$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/database/DatabaseStorage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android-data-storage/build.gradle" afterPath="$PROJECT_DIR$/android-data-storage/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/database/DbCache.java" afterPath="$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/database/DbCache.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/database/DbService.java" afterPath="$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/database/DbService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/util/CodeUtils.java" afterPath="$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/util/CodeUtils.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
     </list>
     <ignored path="AndroidDataStorage.iws" />
@@ -56,51 +54,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GsonObjectCoder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/database/GsonObjectCoder.java">
+      <file leaf-file-name="DbService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/database/DbService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+            <state vertical-scroll-proportion="-98.14815">
+              <caret line="233" column="33" selection-start-line="233" selection-start-column="24" selection-end-line="233" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GzipCoderHook.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/database/GzipCoderHook.java">
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/android-data-storage/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+            <state vertical-scroll-proportion="-13.148149">
+              <caret line="55" column="51" selection-start-line="55" selection-start-column="51" selection-end-line="55" selection-end-column="51" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ICoderHook.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/database/ICoderHook.java">
+      <file leaf-file-name="DatabaseStorage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/database/DatabaseStorage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IDbOperation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/database/IDbOperation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CodeUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/util/CodeUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+            <state vertical-scroll-proportion="-54.814816">
+              <caret line="205" column="42" selection-start-line="205" selection-start-column="35" selection-end-line="205" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -119,7 +97,7 @@
       <file leaf-file-name="DataStorageFactory.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/DataStorageFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-6.5925927">
               <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding />
             </state>
@@ -136,11 +114,59 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IDataStorage.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="IDataStorage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/IDataStorage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33274338">
-              <caret line="68" column="13" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="35" column="10" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DbCache.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/database/DbCache.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.598513">
+              <caret line="119" column="23" selection-start-line="119" selection-start-column="23" selection-end-line="119" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#598#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#4372#4395#0" expanded="true" />
+                <element signature="e#4425#4623#0" expanded="true" />
+                <element signature="e#4622#4623#0" expanded="true" />
+                <element signature="e#4767#4783#0" expanded="true" />
+                <element signature="e#5022#5151#0" expanded="true" />
+                <element signature="e#5150#5151#0" expanded="true" />
+                <element signature="e#5207#5208#0" expanded="true" />
+                <element signature="e#5248#5249#0" expanded="true" />
+                <element signature="e#5436#6207#0" expanded="true" />
+                <element signature="e#6206#6207#0" expanded="true" />
+                <element signature="e#6577#6768#0" expanded="true" />
+                <element signature="e#6767#6768#0" expanded="true" />
+                <element signature="e#7081#7246#0" expanded="true" />
+                <element signature="e#7245#7246#0" expanded="true" />
+                <element signature="e#7677#7850#0" expanded="true" />
+                <element signature="e#7849#7850#0" expanded="true" />
+                <element signature="e#9325#9497#0" expanded="true" />
+                <element signature="e#9496#9497#0" expanded="true" />
+                <element signature="e#10640#10815#0" expanded="true" />
+                <element signature="e#10814#10815#0" expanded="true" />
+                <element signature="e#11130#11147#0" expanded="true" />
+                <element signature="e#11971#11988#0" expanded="true" />
+                <element signature="e#12739#12893#0" expanded="true" />
+                <element signature="e#12892#12893#0" expanded="true" />
+                <element signature="e#13710#13718#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ObjectCanary.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/xiaofei.library/concurrent-utils/0.1.0/336ea8209e9fc7baa5e85361d96a3cacbff6eb16/concurrent-utils-0.1.0-sources.jar!/xiaofei/library/concurrentutils/ObjectCanary.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="69" column="32" selection-start-line="69" selection-start-column="32" selection-end-line="69" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -2292,7 +2318,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="5860401647000" />
+        <entry key="$PROJECT_DIR$" value="5860748181000" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -2516,6 +2542,7 @@
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/intellij/annotations/12.0/annotations-12.0.jar" />
                             <option value="$USER_HOME$/Downloads/android-sdk-macosx/extras/android/m2repository/com/android/support/appcompat-v7/23.3.0/appcompat-v7-23.3.0.aar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.5/686c608d1805b6d4d425ec4459e88164ffc85870/gson-2.5.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/xiaofei.library/concurrent-utils/0.1.1/5917bae7965ee7c7985842791e4acd36d72e0a94/concurrent-utils-0.1.1.jar" />
                             <option value="$USER_HOME$/Downloads/android-sdk-macosx/extras/android/m2repository/com/android/support/support-vector-drawable/23.3.0/support-vector-drawable-23.3.0.aar" />
                             <option value="$USER_HOME$/Downloads/android-sdk-macosx/extras/android/m2repository/com/android/support/animated-vector-drawable/23.3.0/animated-vector-drawable-23.3.0.aar" />
                             <option value="$USER_HOME$/Downloads/android-sdk-macosx/extras/android/m2repository/com/android/support/support-v4/23.3.0/support-v4-23.3.0.aar" />
@@ -2634,6 +2661,7 @@
                             <option value="$USER_HOME$/Downloads/android-sdk-macosx/extras/android/m2repository/com/android/support/animated-vector-drawable/23.3.0/animated-vector-drawable-23.3.0.aar" />
                             <option value="$USER_HOME$/Downloads/android-sdk-macosx/extras/android/m2repository/com/android/support/support-v4/23.3.0/support-v4-23.3.0.aar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.5/686c608d1805b6d4d425ec4459e88164ffc85870/gson-2.5.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/xiaofei.library/concurrent-utils/0.1.1/5917bae7965ee7c7985842791e4acd36d72e0a94/concurrent-utils-0.1.1.jar" />
                             <option value="$USER_HOME$/Downloads/android-sdk-macosx/extras/android/m2repository/com/android/support/support-annotations/23.3.0/support-annotations-23.3.0.jar" />
                           </list>
                         </option>
@@ -2937,12 +2965,12 @@
         <option value="$PROJECT_DIR$/android-data-storage/src/androidTest/java/xiaofei/library/datastorage/database/DbCacheConcurrencyTest.java" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/README-ZH-CN.md" />
-        <option value="$PROJECT_DIR$/android-data-storage/build.gradle" />
         <option value="$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/annotation/AnnotationProcessor.java" />
         <option value="$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/database/DatabaseStorage.java" />
-        <option value="$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/database/DbCache.java" />
         <option value="$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/database/DbService.java" />
         <option value="$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/util/CodeUtils.java" />
+        <option value="$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/database/DbCache.java" />
+        <option value="$PROJECT_DIR$/android-data-storage/build.gradle" />
       </list>
     </option>
   </component>
@@ -2976,39 +3004,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="AndroidView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AndroidDataStorage" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AndroidDataStorage" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="datastorage" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AndroidDataStorage" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -3465,6 +3460,39 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="copyright" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="AndroidView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AndroidDataStorage" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AndroidDataStorage" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="datastorage" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AndroidDataStorage" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -3941,16 +3969,16 @@
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6694772" sideWeight="0.509693" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6694772" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32715008" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32715008" sideWeight="0.49676898" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6694772" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6694772" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6694772" sideWeight="0.49030694" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -4060,15 +4088,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android-data-storage/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4215,9 +4234,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.6603775">
           <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
@@ -4228,6 +4244,9 @@
             <element signature="e#397#430#0" expanded="false" />
           </folding>
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
@@ -4293,14 +4312,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/android-data-storage/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/annotation/FieldMember.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -4343,29 +4354,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/database/DbCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.6296296">
-          <caret line="272" column="54" selection-start-line="272" selection-start-column="45" selection-end-line="272" selection-end-column="54" />
-          <folding>
-            <element signature="e#0#598#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#13215#13223#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/database/DatabaseStorage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.259259">
-          <caret line="206" column="50" selection-start-line="206" selection-start-column="41" selection-end-line="206" selection-end-column="50" />
-          <folding>
-            <element signature="e#3563#3564#0" expanded="true" />
-            <element signature="e#3611#3612#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/database/DbConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -4386,22 +4374,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/database/DbService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.037037">
-          <caret line="233" column="33" selection-start-line="233" selection-start-column="24" selection-end-line="233" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/database/DefaultCoderHook.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="3" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
           <folding />
         </state>
       </provider>
@@ -4454,14 +4426,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/DataStorageFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/util/GzipUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -4470,11 +4434,95 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/database/DefaultCoderHook.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="3" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/database/DbService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-98.14815">
+          <caret line="233" column="33" selection-start-line="233" selection-start-column="24" selection-end-line="233" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/xiaofei.library/concurrent-utils/0.1.0/336ea8209e9fc7baa5e85361d96a3cacbff6eb16/concurrent-utils-0.1.0-sources.jar!/xiaofei/library/concurrentutils/ObjectCanary.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="69" column="32" selection-start-line="69" selection-start-column="32" selection-end-line="69" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/IDataStorage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33274338">
-          <caret line="68" column="13" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="10" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="10" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android-data-storage/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.148149">
+          <caret line="55" column="51" selection-start-line="55" selection-start-column="51" selection-end-line="55" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/DataStorageFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.5925927">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/database/DatabaseStorage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-54.814816">
+          <caret line="205" column="42" selection-start-line="205" selection-start-column="35" selection-end-line="205" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android-data-storage/src/main/java/xiaofei/library/datastorage/database/DbCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.598513">
+          <caret line="119" column="23" selection-start-line="119" selection-start-column="23" selection-end-line="119" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#598#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#4372#4395#0" expanded="true" />
+            <element signature="e#4425#4623#0" expanded="true" />
+            <element signature="e#4622#4623#0" expanded="true" />
+            <element signature="e#4767#4783#0" expanded="true" />
+            <element signature="e#5022#5151#0" expanded="true" />
+            <element signature="e#5150#5151#0" expanded="true" />
+            <element signature="e#5207#5208#0" expanded="true" />
+            <element signature="e#5248#5249#0" expanded="true" />
+            <element signature="e#5436#6207#0" expanded="true" />
+            <element signature="e#6206#6207#0" expanded="true" />
+            <element signature="e#6577#6768#0" expanded="true" />
+            <element signature="e#6767#6768#0" expanded="true" />
+            <element signature="e#7081#7246#0" expanded="true" />
+            <element signature="e#7245#7246#0" expanded="true" />
+            <element signature="e#7677#7850#0" expanded="true" />
+            <element signature="e#7849#7850#0" expanded="true" />
+            <element signature="e#9325#9497#0" expanded="true" />
+            <element signature="e#9496#9497#0" expanded="true" />
+            <element signature="e#10640#10815#0" expanded="true" />
+            <element signature="e#10814#10815#0" expanded="true" />
+            <element signature="e#11130#11147#0" expanded="true" />
+            <element signature="e#11971#11988#0" expanded="true" />
+            <element signature="e#12739#12893#0" expanded="true" />
+            <element signature="e#12892#12893#0" expanded="true" />
+            <element signature="e#13710#13718#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
