@@ -221,3 +221,4 @@ public class DatabaseStorage implements IDataStorage {
         mCache.clearTable();
     }
 }
+//TODO multi-process acess

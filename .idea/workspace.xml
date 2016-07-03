@@ -12,10 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="230e864c-ae34-4026-b754-d3e06a820e06" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-data-storage/src/androidTest/java/xiaofei/library/datastorage/database/DbCacheExtremelyLongObjectTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android-data-storage/android-data-storage.iml" afterPath="$PROJECT_DIR$/android-data-storage/android-data-storage.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
     </list>
     <ignored path="AndroidDataStorage.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,8 +43,8 @@
       <file leaf-file-name="DbCacheExtremelyLongObjectTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/android-data-storage/src/androidTest/java/xiaofei/library/datastorage/database/DbCacheExtremelyLongObjectTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.8452381">
-              <caret line="65" column="20" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.23809524">
+              <caret line="47" column="19" selection-start-line="47" selection-start-column="12" selection-end-line="47" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -3883,9 +3880,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="insertAndClear() - 2016.07.02 at 21h 19m 11s.xml">
-      <configuration name="insertAndClear()" configurationId="AndroidTestRunConfigurationType" />
-    </history-entry>
     <history-entry file="test() - 2016.07.02 at 22h 24m 34s.xml">
       <configuration name="test()" configurationId="AndroidTestRunConfigurationType" />
     </history-entry>
@@ -3911,6 +3905,9 @@
       <configuration name="test()" configurationId="AndroidTestRunConfigurationType" />
     </history-entry>
     <history-entry file="test() - 2016.07.02 at 22h 30m 45s.xml">
+      <configuration name="test()" configurationId="AndroidTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="test() - 2016.07.02 at 22h 31m 24s.xml">
       <configuration name="test()" configurationId="AndroidTestRunConfigurationType" />
     </history-entry>
   </component>
@@ -4458,8 +4455,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/android-data-storage/src/androidTest/java/xiaofei/library/datastorage/database/DbCacheExtremelyLongObjectTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.8452381">
-          <caret line="65" column="20" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.23809524">
+          <caret line="47" column="19" selection-start-line="47" selection-start-column="12" selection-end-line="47" selection-end-column="19" />
           <folding />
         </state>
       </provider>
