@@ -17,7 +17,7 @@ An easy-to-use and high-performance library for storing data in the Android syst
 
 ```
 dependencies {
-    compile 'xiaofei.library:android-data-storage:1.2.0'
+    compile 'xiaofei.library:android-data-storage:1.3.0'
 }
 ```
 
@@ -27,7 +27,7 @@ dependencies {
 <dependency>
   <groupId>xiaofei.library</groupId>
   <artifactId>android-data-storage</artifactId>
-  <version>1.2.0</version>
+  <version>1.3.0</version>
   <type>pom</type>
 </dependency>
 ```
