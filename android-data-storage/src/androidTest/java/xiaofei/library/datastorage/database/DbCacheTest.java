@@ -20,7 +20,7 @@ package xiaofei.library.datastorage.database;
 
 import android.support.test.InstrumentationRegistry;
 import android.support.test.runner.AndroidJUnit4;
-import android.support.v4.util.Pair;
+import androidx.core.util.Pair;
 
 import junit.framework.TestCase;
 
