@@ -31,17 +31,6 @@ dependencies {
 }
 ```
 
-##Maven
-
-```
-<dependency>
-  <groupId>xiaofei.library</groupId>
-  <artifactId>android-data-storage</artifactId>
-  <version>1.3.0</version>
-  <type>pom</type>
-</dependency>
-```
-
 ##Usage
 
 ###1. Obtain the implementation of data storage
