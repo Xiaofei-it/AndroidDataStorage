@@ -21,7 +21,7 @@ package xiaofei.library.datastorage.database;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.support.v4.util.Pair;
+import androidx.core.util.Pair;
 
 import java.util.LinkedList;
 import java.util.List;

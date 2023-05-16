@@ -19,7 +19,7 @@
 package xiaofei.library.datastorage.database;
 
 import android.content.Context;
-import android.support.v4.util.Pair;
+import androidx.core.util.Pair;
 
 import java.util.ArrayList;
 import java.util.Collections;

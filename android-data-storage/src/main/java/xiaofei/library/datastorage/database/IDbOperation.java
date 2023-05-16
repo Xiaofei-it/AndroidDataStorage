@@ -18,7 +18,7 @@
 
 package xiaofei.library.datastorage.database;
 
-import android.support.v4.util.Pair;
+import androidx.core.util.Pair;
 
 import java.util.List;
 
