@@ -1,3 +1,5 @@
+[![](https://jitpack.io/v/badboy-tian/AndroidDataStorage.svg)](https://jitpack.io/#badboy-tian/AndroidDataStorage)
+
 # AndroidDataStorage
 An easy-to-use and high-performance library for storing data in the Android system.
 
@@ -14,10 +16,18 @@ An easy-to-use and high-performance library for storing data in the Android syst
 4. Good Ability of fault tolerance and high stability.
 
 ##Gradle
+```
+allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
 
 ```
 dependencies {
-    compile 'xiaofei.library:android-data-storage:1.3.0'
+    implementation 'com.github.badboy-tian:AndroidDataStorage:TAG'
 }
 ```
 
